@@ -465,7 +465,7 @@ public static bool Admin_GestureAdd(string gesture_name, string thumbnail_url, s
 <ol>
 <strong>
 <li>Copy and Paste the code given below in 'HomeController.cs', (i.e) below the comment 'Paste the RandomGestureAPI Function code here...'</li>
-<li>Follow the screenshot shown below to navigate to the RandomGestureAPI Function in the Facade.cs file</li>&nbsp;
+<li>Follow the screenshot shown below to navigate to the RandomGestureAPI Function in the HomeController.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/Class/8.png" alt="image" style="max-width:100%;">&nbsp;
 <blockquote>
 <pre>
@@ -485,7 +485,7 @@ public JsonResult RandomGestureAPI()
 <ol>
 <strong>
 <li>Copy and Paste the code given below in 'HomeController.cs', (i.e) below the comment 'Paste the GestureManagement_FetchByID Function code here...'</li>
-<li>Follow the screenshot shown below to navigate to the GestureManagement_FetchByID Function in the Facade.cs file</li>&nbsp;
+<li>Follow the screenshot shown below to navigate to the GestureManagement_FetchByID Function in the HomeController.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/Class/9.png" alt="image" style="max-width:100%;">&nbsp;
 <blockquote>
 <pre>
@@ -505,7 +505,7 @@ public JsonResult GestureManagement_FetchByID(string data)
 <ol>
 <strong>
 <li>Copy and Paste the code given below in 'HomeController.cs', (i.e) below the comment 'Paste the 'GestureManagement_FetchByIsActive' Function code here...'</li>
-<li>Follow the screenshot shown below to navigate to the GestureManagement_FetchByIsActive Function in the Facade.cs file</li>&nbsp;
+<li>Follow the screenshot shown below to navigate to the GestureManagement_FetchByIsActive Function in the HomeController.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/Class/10.png" alt="image" style="max-width:100%;">&nbsp;
 <blockquote>
 <pre>
@@ -526,7 +526,7 @@ public JsonResult GestureManagement_FetchByIsActive(string data, string value)
 <ol>
 <strong>
 <li>Copy and Paste the code given below in 'HomeController.cs', (i.e) below the comment 'Paste the 'GestureManagement_InsertByIsID' Function code here...'</li>
-<li>Follow the screenshot shown below to navigate to the GestureManagement_InsertByIsID Function in the Facade.cs file</li>&nbsp;
+<li>Follow the screenshot shown below to navigate to the GestureManagement_InsertByIsID Function in the HomeController.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/Class/11.png" alt="image" style="max-width:100%;">&nbsp;
 <blockquote>
 <pre>

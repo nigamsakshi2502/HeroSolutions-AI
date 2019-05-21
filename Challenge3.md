@@ -519,6 +519,112 @@ public JsonResult VerifyAPI(string data, string random_gesture, bool CheckIn)
 </blockquote>
 </strong>
 </ol>
+<h3>Till this you can run the solution and get the output</h3>
+<p>In the browser, navigate to User -> Register page</p>
+<ol>
+    <li>Click on the toggle button</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_1.jpg" alt="image" style="max-width: 100%;">
+    <li>Browse page will be displayed</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_2.JPG" alt="image" style="max-width: 100%;">
+    <li>Click on the Browse button</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_3.jpg" alt="image" style="max-width: 100%;">
+    <li>Select the image and click on Submit</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_4.jpg" alt="image" style="max-width: 100%;">
+    <li>If all the image validations are passed your image will display in the right side</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_5.JPG" alt="image" style="max-width: 100%;">
+    <li>Fill the details and click on submit [Note : Name field is mandatory]</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_6.jpg" alt="image" style="max-width: 100%;">
+    <li>Success message will be displayed</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Register/reg_7.jpg" alt="image" style="max-width: 100%;">
+</ol>
+<p>Navigate to User -> Verify page </p>
+<ol>
+    <li>Click on the toggle button</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_1.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on the Browse button</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_2.jpg" alt="image" style="max-width: 100%;">
+    <li>Select the image, click open</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_3.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Check-in</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_5.jpg" alt="image" style="max-width: 100%;">
+    <li>Welcome message will be displayed along with your check-in time</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_6.jpg" alt="image" style="max-width: 100%;">
+    <li>If check-in button was again clicked, error message will be shown</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_7.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Check-out button</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_8.jpg" alt="image" style="max-width: 100%;">
+    <li>Good Bye message will be displayed along with your check out time</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/Verify/verify_9.jpg" alt="image" style="max-width: 100%;">
+</ol>
 <h3>Invoking Audit Log</h3>
+<ol>
+    <strong>
+        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureShow' Function Code here...'</li>
+        <blockquote>
+            <pre>
+                <code>
+public static List&lt;gesture_management&gt; Admin_GestureShow()
+{
+  GestureTable gstobj = new GestureTable();
+&nbsp;
+  return gstobj.List();
+}
+                </code>
+            </pre>
+        </blockquote>
+    </strong>
+<strong>
+        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureEdit' Function Code here...'</li>
+        <blockquote>
+            <pre>
+                <code>
+public static gesture_management Admin_GestureEdit(string id)
+{
+   GestureTable gt = new GestureTable();
+   &nbsp;
+   return gt.Edit(id);
+}
+                </code>
+            </pre>
+        </blockquote>
+</strong>
+<strong>
+        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureUpdate' Function Code here...'</li>
+        <blockquote>
+            <pre>
+                <code>
+public static bool Admin_GestureUpdate(string id, String isactive)
+{
+    GestureTable gt = new GestureTable();
+    &nbsp;
+    return gt.Update(id,isactive);
+}
+                </code>
+            </pre>
+        </blockquote>
+</strong>
+<strong>
+        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureAdd' Function Code here...'</li>
+        <blockquote>
+            <pre>
+                <code>
+public static bool Admin_GestureAdd(string gesture_name, string thumbnail_url, string gesture_message, string isactive)
+{
+    GestureTable gstobj = new GestureTable();
+&nbsp;
+    if (gstobj.Add (gesture_name, thumbnail_url, gesture_message, isactive))
+    {
+        return true;
+    }
+&nbsp;
+    return false;
+}
+                </code>
+            </pre>
+        </blockquote>
+</strong>
+<li></li>
+    <img src="" alt="image" style="max-width: 100%;">
+</ol>
 <h3>Congratulations! You have successfully completed Challenge 3</h3>
 <h3>The next session is<a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge4.md"> Challenge 4</a></h3>
