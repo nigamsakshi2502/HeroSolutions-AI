@@ -127,15 +127,15 @@ public static byte[] storetoserver(string base64data)
   <h3>Creating Group ID</h3>
   <ol>
     <strong>
-      <li>Navigate to <a href="https://southeastasia.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244">Developer Portal</a>, click on PersonGroup tab</li>
+      <li>Navigate to <a href="https://southeastasia.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244">Developer Portal</a>, click on PersonGroup tab on the left pane</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_1.jpg" alt="image" style="max-width: 100%;">
-      <li>Click on create tab</li>
+      <li>Click on create tab on the left pane</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_2.jpg" alt="image" style="max-width: 100%;">
       <li>Select the region</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_3.jpg" alt="image" style="max-width: 100%;">
-      <li></li>
+      <li>Enter any id in PersonGroupId, specify the face api key created in Azure portal here in 'Ocp-Apim-Subscription-Key'</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_4.jpg" alt="image" style="max-width: 100%;">
-      <li></li>
+      <li>In the Json specify the name and recognitionModel [Note : recognitionModel value must be 'recognition_01']</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_5.jpg" alt="image" style="max-width: 100%;">
       <li></li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_6.jpg" alt="image" style="max-width: 100%;">
