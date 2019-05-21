@@ -374,7 +374,7 @@ public class ImageValidationHandler
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/9.jpg" style="max-width:100%;">&nbsp;
 <li>List of all the tables</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/10.jpg" style="max-width:100%;">&nbsp;
-<h4>Paste your SQL server connection string in Web.config (i.e) for the key 'AzureSqlConnectionString'</h4>
+<h4>Paste your SQL server connection string in Web.config (i.e) for the key 'AzureSqlConnectionString', in the connection string specify your database user name and password, make 'MultipleActiveResultSets' as True</h4>
  <p>Lets move on to the actual scenario where the Admin part is also included.</p>
 <p>The below code snippet contains the image_validation class properties. The ImageValidationTable Class has separate functions for each database query.</p>
 <ol>

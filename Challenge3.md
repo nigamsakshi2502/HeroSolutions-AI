@@ -623,6 +623,22 @@ public static bool Admin_GestureAdd(string gesture_name, string thumbnail_url, s
             </pre>
         </blockquote>
 </strong>
+<ol>
+<strong>
+   <li>Paste the code given below in 'HomeController.cs', (i.e) Replace the whole ActionResult 'audit_log'</li>
+   <blockquote>
+     <pre>
+       <code>
+        public ActionResult audit_log()
+        {
+            // Calling the intermediator file and Returing the List file to the View 
+            return View(Facade.Admin_AuditLogShow());
+        }
+       </code>
+   </pre>
+</blockquote>
+</strong>
+</ol>
 <li></li>
     <img src="" alt="image" style="max-width: 100%;">
 </ol>
