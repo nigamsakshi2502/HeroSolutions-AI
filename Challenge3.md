@@ -29,7 +29,7 @@
 </strong>
 </ol>
 <h2>Invoking the Register API</h2>
-<<h3>Getting Started with the coding part - Following are the guidelines to work on the Register API</h3>
+<h3>Getting Started with the coding part - Following are the guidelines to work on the Register API</h3>
 <p>explain code</p>
 <ol>
 	<strong>
