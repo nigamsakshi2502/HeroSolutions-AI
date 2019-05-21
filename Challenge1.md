@@ -100,11 +100,34 @@ public static byte[] storetoserver(string base64data)
 </ol>
   <img src="http://139.59.61.161/MSWorkshop2019/Invoke_StarterKit/9.PNG" alt="image" style="max-width:100%;">&nbsp;
 <p>Lets move on to the Face API</p>
+<h3>Creating Face API Key</h3>
+<ol>
+  <strong>
+    <li>Sign-in to <a href = "portal.azure.com"> Azure Portal, enter your username</a></li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_1.jpg" alt="image" style="max-width: 100%;">
+    <li>Enter your Password</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_2.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on create a resource</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_3.jpg" alt="image" style="max-width: 100%;">
+    <li>In the search box type 'face'</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_4.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on create</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_5.jpg" alt="image" style="max-width: 100%;">
+    <li>Enter name and select location, pricing tier and resource group</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_6.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Overview tab</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_7.jpg" alt="image" style="max-width: 100%;">
+    <li>Copy the endpoint</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_8.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Keys tab</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_9.jpg" alt="image" style="max-width: 100%;">
+    <li>Copy the Keys</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_10.jpg" alt="image" style="max-width: 100%;">
+  </strong></ol>
 <h3>Invoking the Face API</h3>
 <ol>
   <strong>
       <li>To start with, update the API Key and Endpoint in Web.Config</li>
-      <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
       <li>Navigate to Web.Config</li>
       <li>Paste the Endpoint in 'FaceAPIEndPoint' and Key in 'FaceAPIKey'</li>
       &nbsp;
