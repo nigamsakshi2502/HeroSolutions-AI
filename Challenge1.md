@@ -103,7 +103,7 @@ public static byte[] storetoserver(string base64data)
 <h3>Creating Face API Key</h3>
 <ol>
   <strong>
-    <li>Sign-in to <a href = "portal.azure.com"> Azure Portal</a>, enter your username</li>
+    <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_1.jpg" alt="image" style="max-width: 100%;">
     <li>Enter your Password</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_2.jpg" alt="image" style="max-width: 100%;">
@@ -137,7 +137,7 @@ public static byte[] storetoserver(string base64data)
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_4.jpg" alt="image" style="max-width: 100%;">
       <li>In the Json specify the name and recognitionModel [Note : recognitionModel value must be 'recognition_01']</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_5.jpg" alt="image" style="max-width: 100%;">
-      <li></li>
+      <li>Response will be displayed</li>
       <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_6.jpg" alt="image" style="max-width: 100%;">
     </strong>
   </ol>
