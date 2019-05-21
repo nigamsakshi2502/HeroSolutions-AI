@@ -24,13 +24,13 @@
 <strong>
    <li>Open register.cshtml</li>&nbsp;
    <img src="http://139.59.61.161/MSWorkshop2019/Register/UnComment1.PNG" style="max-width:100%;">&nbsp;
-   <li>Select the code from line number 121 to 123 and click on the uncomment button</li>&nbsp;
+   <li>Select the code from line number 211 to 213 and click on the uncomment button</li>&nbsp;
    <img src="http://139.59.61.161/MSWorkshop2019/Register/UnComment2.png" style="max-width:100%;">
 </strong>
 </ol>
 <h2>Invoking the Register API</h2>
 <h3>Getting Started with the coding part - Following are the guidelines to work on the Register API</h3>
-<p>explain code</p>
+<p>Using Face API we are going to do Face registration and Face verification</p>
 <ol>
 	<strong>
 		<li>Paste the code given below in 'FaceRegistrationHandler.cs', (i.e) below the comment 'Paste the 'FaceRegistrationHandler' Class code here...'</li>
@@ -340,6 +340,68 @@ public static List&lt;List&lt;string&gt;&gt; User_Registration(string name, stri
 </pre>
 </blockquote>
 </strong>
+</ol>
+<ol>
+    <strong>
+        <li>Replace the whole code of User_ImageValidation() in Facade.cs</li>
+        <blockquote>
+            <pre>
+                <code>
+public static List&lt;List&lt;string&gt;&gt; User_ImageValidation(string realfakecheck,byte[] imagebyte,string url)
+{
+            List&lt;List&lt;string&gt;&gt; err = new List&lt;List&lt;string&gt;&gt;();
+            err.Add(new List&lt;string&gt;());
+&nbsp;
+            ImageValidationHandler ivhobj = new ImageValidationHandler();
+&nbsp;
+            ImageValidationTable ivtobj = new ImageValidationTable();
+&nbsp;
+            GestureHandler gsobj = new GestureHandler();
+&nbsp;
+            FaceRegistrationHandler fcobj = new FaceRegistrationHandler();
+&nbsp;
+            List&lt;bool&gt; flag = ivtobj.UserList();
+            if (ivtobj.error != "")
+            {
+                err[0].Add("");
+                err[0].Add(ivtobj.error);
+                return err;
+            }
+&nbsp;
+            string result = ivhobj.Validate(url,imagebyte, flag[0], flag[2], flag[1], flag[3]);
+&nbsp;
+            if (result == "0")
+            {
+                       if (gsobj.GenerateDefaultGesture(url,imagebyte))
+                        {
+                            err[0].Add("Success");
+                            err[0].Add("");
+                            return err;
+                        }
+                        else
+                        {
+                            if (gsobj.error != "")
+                            {
+                                err[0].Add("");
+                                err[0].Add(gsobj.error);
+                                return err;
+                            }
+                            err[0].Add("Please follow the Gesture");
+                            err[0].Add("");
+                            return err;
+                        }
+            }
+            else
+            {
+                err[0].Add(result);
+                err[0].Add("");
+                return err;
+            }
+}
+</code>
+            </pre>
+        </blockquote>
+    </strong>
 </ol>
 <h3>Invoke the User_Registration() of Facade Class from HomeController</h3>
 <ol>
