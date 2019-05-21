@@ -652,7 +652,6 @@ public static List<audit_log> Admin_AuditLogShow()
             </pre>
         </blockquote>
     </strong>
-<ol>
 <strong>
    <li>Paste the code given below in 'HomeController.cs', (i.e) Replace the whole ActionResult 'audit_log'</li>
    <blockquote>
@@ -669,8 +668,6 @@ public static List<audit_log> Admin_AuditLogShow()
 </strong>
 </ol>
 <p>Now you can run and check the Audit Log outputs</p>
-<li></li>
     <img src="" alt="image" style="max-width: 100%;">
-</ol>
 <h3>Congratulations! You have successfully completed Challenge 3</h3>
 <h3>The next session is<a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge4.md"> Challenge 4</a></h3>
