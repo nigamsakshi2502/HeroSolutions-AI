@@ -56,12 +56,12 @@
       <li>Automation of “Quality Control” of PDI process</li>
       <li>Chat bot-based reporting of work and approval of work</li>
     </ul>
-     <p style="margin: 10px 0 15px 0;"><a href="">Challenge 0 </a>– Infrastructure Setup and Verification</p>
+     <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge0.md">Challenge 0 </a>– Infrastructure Setup and Verification</p>
      <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge1.md">Challenge 1 </a>– Image Validation using Azure Computer Vision</p>
      <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge2.md">Challenge 2 </a>– Gesture Management using Azure Custom Vision</p>
      <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge3.md">Challenge 3 </a>– Gesture Management using Azure Custom Vision</p>
      <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge4.md">Challenge 4 </a>– Quality Control of PDI Verification using Custom Vision Models</p>
-     <p style="margin: 10px 0 15px 0;"><a href="">Challenge 5 </a>– Automatic Extraction of Key Phrases using Azure OCR and LUIS</p>
+     <p style="margin: 10px 0 15px 0;"><a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge5.md">Challenge 5 </a>– Automatic Extraction of Key Phrases using Azure OCR and LUIS</p>
      <p style="margin: 10px 0 15px 0;"><a href="">Challenge 6 </a>– Integration of NLP based Chat bot for Task Management</p>
      <h2 style="padding-bottom: 1px;font-size: 26px;font-weight: 700;">Certifications</h2>
       <p style="margin: 10px 0 15px 0;">Post the session if you are interested in taking up Microsoft Certifications, they following are most appropriate for this session</p>

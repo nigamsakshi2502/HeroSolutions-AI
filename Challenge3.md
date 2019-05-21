@@ -520,3 +520,5 @@ public JsonResult VerifyAPI(string data, string random_gesture, bool CheckIn)
 </strong>
 </ol>
 <h3>Invoking Audit Log</h3>
+<h3>Congratulations! You have successfully completed Challenge 3</h3>
+<h3>The next session is<a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge4.md"> Challenge 3</a></h3>

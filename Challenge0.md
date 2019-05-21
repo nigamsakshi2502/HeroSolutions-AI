@@ -54,6 +54,7 @@
     <img src="http://139.59.61.161/MSWorkshop2019/Challenge0/challenge0_7.jpg" width="70%">
     <h2 style="padding-bottom: 10px;font-size: 26px;font-weight: 700;">Check your Infrastructure Detail</h2>
      <p style="margin: 10px 0 15px 0;">Please verify your Infrastructure compoenents before proceeding to other challenges. Have a great Learning experience.</p>
+     <h3>To start with Challenge 1 <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge1.md"> Click here</a></h3>
 </div>
 </body>
 </html>

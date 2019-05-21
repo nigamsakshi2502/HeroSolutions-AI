@@ -280,4 +280,4 @@ public JsonResult QualityChecking(String data, bool flag, string check)
 <li>Error page for selecting the Accurate image</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Quality_Check/Model2_output/output4.PNG" alt="image" style="max-width:100%;">&nbsp;
 <h3>Congratulations! You have successfully completed Challenge 4</h3>
-<h3>The next session is <a href="">Challenge 5</a></h3>
+<h3>The next session is <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge5.md">Challenge 5</a></h3>
