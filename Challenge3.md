@@ -254,9 +254,7 @@ public class FaceRegistrationHandler
 			</pre>
 		</blockquote>
 	</strong>
-</ol>
 <p>To save the details of a User in the database, follow the code below.</p>
-<ol>
   <strong>
     <li>Paste the code given below in 'StorageHandler.cs', (i.e) below the comment 'Paste the 'FaceRegistrationUserTable' Class code here...'</li>
     <blockquote>
