@@ -32,7 +32,7 @@
     </ul>
     <h2 style="padding-bottom: 10px;font-size: 26px;font-weight: 700;">Sign Up for Infrastructure</h2>
     <p style="margin: 10px 0 15px 0;">Please access the URL and Register yourself to get access to our Infrastructure.</p>
-    <p style="margin: 10px 0 15px 0;">You can sign up either with your Face Image or User Name and Password. Please be assured we will not store your Facial Image in our database and it is only stored in Azure Face API as a template. Azure provides no way to regenerate original images from face templates and its is GPPR Complaint too.</p>
+    <p style="margin: 10px 0 15px 0;">You can sign up either with your Face Image or User Name and Password. Please be assured we will not store your Facial Image in our database and it is only stored in Azure Face API as a template. Azure provides no way to regenerate original images from face templates and its is GDPR Complaint too.</p>
     <p style="margin: 10px 0 15px 0;">Soon after this session, we will delete all the Facial Template data from Azure Accounts.</p>
     <h2 style="padding-bottom: 10px;font-size: 26px;font-weight: 700;">Sign Up Process</h2>
       <p style="margin: 10px 0 15px 0;">Click <a href="https://jumpstartninja.com/HeroSolutions_Wipro/index.php">here</a> to navigate to Infrastructure Provisioning Site, Click on Register here.</p>
