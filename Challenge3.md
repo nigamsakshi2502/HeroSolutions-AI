@@ -399,7 +399,28 @@ public static List&lt;List&lt;string&gt;&gt; User_ImageValidation(string realfak
 </code>
             </pre>
         </blockquote>
-    </strong>
+<li>Replace the whole code of ImageValidationAPI() in HomeController.cs</li>
+        <blockquote>
+            <pre>
+                <code>
+public JsonResult ImageValidationAPI(string data, string check)
+{
+    string imgefile = "Img" + $@"{System.DateTime.Now.Ticks}.jpg";
+    string Url = Server.MapPath(@"~\Images\" + imgefile);
+    System.IO.File.WriteAllBytes(Url, Convert.FromBase64String(data));
+    var imagebyte = Facade.storetoserver(data);
+&nbsp;
+    List&lt;List&lt;string&gt;&gt; result = Facade.User_ImageValidation(check, imagebyte, imgefile);
+&nbsp;
+    if (result[0][1] == "")
+    {
+        return Json(new { Result = result[0][0] });
+    }
+&nbsp;
+    return Json(new { Result = "Failed" });
+}
+                </code>
+</pre></blockquote></strong>
 </ol>
 <h3>Invoke the User_Registration() of Facade Class from HomeController</h3>
 <ol>
