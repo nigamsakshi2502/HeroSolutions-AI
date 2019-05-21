@@ -10,14 +10,62 @@
 <p>After getting all the text from the OCR, we need to do the Automatic Keyword Extraction using Microsoft LUIS.</p>
 <p>This application has the DocumentVerificationHandler.cs file, which is used to implement all the functionalities.The Facade.cs file is used as an intermediator between HomeController and DocumentVerificationHandler files.</p>&nbsp;
 <h3>Invoke the Quality Controller Check API</h3>
+<h3>Creating Cognitive service API Key</h3>
+<ol>
+  <strong>
+    <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_1.jpg" alt="image" style="max-width: 100%;">
+    <li>Enter your Password</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_2.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on create a resource</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_3.jpg" alt="image" style="max-width: 100%;">
+    <li>In the search box type 'cognitive service'</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_4.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on create</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_5.jpg" alt="image" style="max-width: 100%;">
+    <li>Enter name and select location, pricing tier and resource group</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_6.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Overview tab</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_7.jpg" alt="image" style="max-width: 100%;">
+    <li>Copy the endpoint</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_8.jpg" alt="image" style="max-width: 100%;">
+    <li>Click on Keys tab</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_9.jpg" alt="image" style="max-width: 100%;">
+    <li>Copy the Keys</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/computervisionAPI_create/portal_10.jpg" alt="image" style="max-width: 100%;">
+  </strong></ol>
 <ol>
   <strong>
       <li>To start with, update the API Key and Endpoint in Web.Config</li>
-      <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
       <li>Follow the picture shown below to navigate the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <li>Copy and paste the Endpoint in 'QualityEndPoint', Key in 'QualitySubcriptionKey', PredictionKey in 'QualityPredictionKey', IterationID in 'QualityIterationID' in both the model files</li>&nbsp;
+      <li>Copy and paste the Endpoint in 'OCREndpoint' and Key in 'OCRSubscriptionKey'</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/OCR/4.PNG" alt="image" style="max-width: 100%;"></strong>
+</ol>
+<h3>Importing the LUIS Model</h3>
+<ol>
+    <strong>
+        <li>Login to Luis.ai</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/1.jpg" alt="image" style="max-width: 100%;">
+        <li>Enter your username</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/2.jpg" alt="image" style="max-width: 100%;">
+        <li>Enter your password</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/3.jpg" alt="image" style="max-width: 100%;">
+        <li>Click on Import app</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/4.jpg" alt="image" style="max-width: 100%;">
+        <li>Select the Json file</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/5.jpg" alt="image" style="max-width: 100%;">
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/6.jpg" alt="image" style="max-width: 100%;">
+        <li>Enter name</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/7.jpg" alt="image" style="max-width: 100%;">
+        <li>Click on Manage</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/8.jpg" alt="image" style="max-width: 100%;">
+        <li>Copy the application ID</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/9.jpg" alt="image" style="max-width: 100%;">
+        <li>Copy Key and Endpoint</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/10.jpg" alt="image" style="max-width: 100%;">
+        <li>Paste the 'LUIS_EndPoint', 'LUIS_AppID' and 'LUIS_Key' in Web.Config</li>
+    </strong>
 </ol>
 <h3>Getting started with coding - here we will implement the DocumentVerificationHandler.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the DocumentVerificationHandler.cs file</li>&nbsp;
