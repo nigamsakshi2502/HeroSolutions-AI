@@ -103,7 +103,7 @@ public static byte[] storetoserver(string base64data)
 <h3>Creating Face API Key</h3>
 <ol>
   <strong>
-    <li>Sign-in to <a href = "portal.azure.com"> Azure Portal, enter your username</a></li>
+    <li>Sign-in to <a href = "portal.azure.com"> Azure Portal</a>, enter your username</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_1.jpg" alt="image" style="max-width: 100%;">
     <li>Enter your Password</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_2.jpg" alt="image" style="max-width: 100%;">
@@ -124,6 +124,23 @@ public static byte[] storetoserver(string base64data)
     <li>Copy the Keys</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_10.jpg" alt="image" style="max-width: 100%;">
   </strong></ol>
+  <h3>Creating Group ID</h3>
+  <ol>
+    <strong>
+      <li>Navigate to <a href="https://southeastasia.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244">Developer Portal</a>, click on PersonGroup tab</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_1.jpg" alt="image" style="max-width: 100%;">
+      <li>Click on create tab</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_2.jpg" alt="image" style="max-width: 100%;">
+      <li>Select the region</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_3.jpg" alt="image" style="max-width: 100%;">
+      <li></li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_4.jpg" alt="image" style="max-width: 100%;">
+      <li></li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_5.jpg" alt="image" style="max-width: 100%;">
+      <li></li>
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_6.jpg" alt="image" style="max-width: 100%;">
+    </strong>
+  </ol>
 <h3>Invoking the Face API</h3>
 <ol>
   <strong>
