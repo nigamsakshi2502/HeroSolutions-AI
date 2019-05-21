@@ -667,7 +667,16 @@ public static List&lt;audit_log&gt; Admin_AuditLogShow()
 </blockquote>
 </strong>
 </ol>
+<h3>Invoking Audit Log design changes</h3>
+<li>Click on auditlog.cshtml</li>
+<img src="http://139.59.61.161/MSWorkshop2019/Audit_Log/1.PNG" alt="image" style="max-width: 100%;">
+<li>Uncomment the code from line 220</li>
+<img src="http://139.59.61.161/MSWorkshop2019/Audit_Log/2.PNG" alt="image" style="max-width: 100%;">
+<li>Uncomment the code till line 264</li>
+<img src="http://139.59.61.161/MSWorkshop2019/Audit_Log/3.PNG" alt="image" style="max-width: 100%;">
+<li>Click on the uncomment button</li>
+<img src="http://139.59.61.161/MSWorkshop2019/Audit_Log/4.png" alt="image" style="max-width: 100%;">
 <p>Now you can run and check the Audit Log outputs</p>
-    <img src="" alt="image" style="max-width: 100%;">
+    <img src="http://139.59.61.161/MSWorkshop2019/Audit_Log/auditlog.JPG" alt="image" style="max-width: 100%;">
 <h3>Congratulations! You have successfully completed Challenge 3</h3>
 <h3>The next session is<a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/Challenge4.md"> Challenge 4</a></h3>

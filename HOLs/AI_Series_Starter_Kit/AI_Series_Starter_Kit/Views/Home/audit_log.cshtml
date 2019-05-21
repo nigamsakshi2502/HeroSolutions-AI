@@ -218,50 +218,50 @@
                     <div id="property-listing" class="flex-row row grid-style edit-marginBottom10">
                         <!-- Checking the model file is empty  -->
                         @*@if (Model.Count == 0)
-                        {
-                            <p style="text-align: center;font-size: 50px;">No data found</p>
-                        }
-                        else
-                        {
-                            @model List<HeroSolutions.AI.HOL.FaceAPI.audit_log>
-                            foreach (var i in Model)
-                            {
+        {
+            <p style="text-align: center;font-size: 50px;">No data found</p>
+        }
+        else
+        {
+            @model List<HeroSolutions.AI.HOL.FaceAPI.audit_log>
+            foreach (var i in Model)
+            {
 
-                                <div class="item col-md-3">
+                <div class="item col-md-3">
 
-                                    <div class="item-box">
-                                        <div class="main-content">
-                                            <div class="image-box">
-                                                <div class="overlay-box">
-                                                    <div class="overlay"></div>
-                                                    <i class="fa fa-search"></i>
-                                                </div>
-                                            </div>
-                                            <div class="main-info">
-                                                <div class="col-sm-12 cs-padding" style="text-align: center;">
-                                                    <img src="~/Images/@i.userimage" alt="smile_api_image" class="img-responsive">
-                                                </div>
-                                                <div class="col-sm-12 cs-padding">
-                                                    <br>
-                                                    <img src="/assets/images/lat.png" alt="" style="float: right;width:18% "><br>
-                                                    <p style="text-align: left;">@i.layer</p>
-                                                    <p style="text-align: left;font-size: 20px;">Device Details</p>
-                                                    <p style="text-align: left;">@i.device_type</p>
-                                                    @if (i.result_type == "Pass")
-                                                    {
-                                                        <p style="text-align: left;font-size: 20px;color:green;font-weight: bolder;">@i.result_type</p>
-                                                    }
-                                                    else
-                                                    {
-                                                        <p style="text-align: left;font-size: 20px;color:red;font-weight: bolder;">@i.result_type</p>
-                                                    }
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="item-box">
+                        <div class="main-content">
+                            <div class="image-box">
+                                <div class="overlay-box">
+                                    <div class="overlay"></div>
+                                    <i class="fa fa-search"></i>
                                 </div>
-                            }
-                        }*@
+                            </div>
+                            <div class="main-info">
+                                <div class="col-sm-12 cs-padding" style="text-align: center;">
+                                    <img src="~/Images/@i.userimage" alt="smile_api_image" class="img-responsive" style="height:200px;">
+                                </div>
+                                <div class="col-sm-12 cs-padding">
+                                    <br>
+                                    <img src="/assets/images/lat.png" alt="" style="float: right;width:18% "><br>
+                                    <p style="text-align: left;">@i.layer</p>
+                                    <p style="text-align: left;font-size: 20px;">Device Details</p>
+                                    <p style="text-align: left;">@i.device_type</p>
+                                    @if (i.result_type == "Pass")
+                                    {
+                                        <p style="text-align: left;font-size: 20px;color:green;font-weight: bolder;">@i.result_type</p>
+                                    }
+                                    else
+                                    {
+                                        <p style="text-align: left;font-size: 20px;color:red;font-weight: bolder;">@i.result_type</p>
+                                    }
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }*@
                     </div>
                     <!-- OFF item  -->
                 </div>
