@@ -74,6 +74,72 @@
             margin-left: 35%;
             border-radius: 50% !important;
         }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+        #warn_msg {
+            font-size: 12px;
+            text-align: center;
+            color: red;
+        }
     </style>
 </head>
 <body class="home-page">
@@ -105,23 +171,65 @@
     <!-- BEGIN MAIN CONTENT -->
     <div class="row">
         <div class="col-md-1 col-sm-1"></div>
+        <div class="col-md-1 col-sm-1">
+            <br />
+            <label class="switch pull-left">
+                <input type="checkbox" id="on_off_btn">
+                <span class="slider round"></span>
+
+            </label>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <p style="padding-top:24px;font-size:16px;">Live streaming/URL Image</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 col-sm-1"></div>
 
         <div class="col-md-5 col-sm-12">
-            <center>
-                <video id="video" class="response take-pic" autoplay=""></video>
-            </center>
+            <section id="cam_ctrl_div" style="padding-top:40px;">
+                <center>
+                    <video id="video" class="response take-pic" autoplay=""></video>
+                </center>
 
-            <center>
-                <h4 id="gesture_name" style="color: red;"></h4>
-            </center>
+                <center>
+                    <h4 id="gesture_name" style="color: red;"></h4>
+                </center>
 
-            @*<center class="checkbox">
-                <label style="color: red;"><input type="checkbox" id="check_id" value="" checked="checked">Detect Fake or Real</label>
-            </center>*@
+                @*<center class="checkbox">
+                    <label style="color: red;"><input type="checkbox" id="check_id" value="" checked="checked">Detect Fake or Real</label>
+                </center>*@
 
-            <center>
-                <button style="margin-top: -2px;" type="button" class="btn signin-btn" id="snap_btn" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading..">Take Snapshot</button>
-            </center>
+                <center>
+                    <button style="margin-top: -2px;" type="button" class="btn signin-btn" id="snap_btn" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading..">Check-IN</button>
+                    <button style="margin-top: -2px;" type="button" class="btn signin-btn" id="snap_btn_Checkout" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading..">Check-OUT</button>
+                </center>
+            </section>
+            <section id="local_ctrl_div" style="padding-top:40px;">
+                <div class="row col-md-12 col-sm-12">
+                    <center>
+                        <canvas id="local_img" style="width:90%;height:375px;"></canvas>
+                    </center>
+                </div>
+                <center>
+                    <input type="file" name="open_image_file" id="open_image_file" class="open_image_file" style="display: none;">
+                    <button class="btn btn-primary mb-4 shadow-2" style="background: white; color: black;border-color: black;" id="open_image_trigger" onclick="imageopen()">&nbsp;&nbsp;Browse</button>
+                    <p id="warn_msg">Kindly upload (PNG,JPEG) formatted images</p>
+
+                </center>
+
+                <center>
+                    <h4 style="color: red;" id="gesture_name_local"></h4>
+                </center>
+                <center class="checkbox">
+                    <label style="color: red;"><input type="checkbox" id="local_check_id" value="" checked="checked" style="position:inherit;margin-top:5px;">Detect Fake or Real</label>
+                </center>
+
+                <center>
+                    <button style="margin-top: -2px;" type="button" class="btn signin-btn" id="local_snap_btn" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading..">Check-IN</button>
+                    <button style="margin-top: -2px;" type="button" class="btn signin-btn" id="local_snap_btn_Checkout" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading..">Check-OUT</button>
+                </center>
+            </section>
         </div>
 
         <div class="col-md-2 col-sm-2"></div>
@@ -178,7 +286,6 @@
         <!-- END COPYRIGHT -->
     </footer>
     <!-- END FOOTER -->
-    </div>
     <!-- END WRAPPER -->
     <!-- Libs -->
     <script type="text/javascript" src="~/assets/js/common/jquery-1.x-git.min.js"></script>
@@ -193,8 +300,302 @@
     <script type="text/javascript" src="~/assets/style-switcher/js/jQuery.style.switcher.js"></script>
 
     <script type="text/javascript">
-
+        $('#local_ctrl_div').hide();
+        $('#warn_msg').hide();
         $(document).ready(function () {
+
+
+        });
+        random_gesture_fn();
+
+        navigator.getUserMedia = (navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia);
+
+        var video;
+        if (navigator.getUserMedia) {
+            navigator.getUserMedia(
+
+                {
+                    video: true,
+                    audio: false
+                },
+                function (localMediaStream) {
+                    video = document.querySelector('video');
+
+                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                        navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+
+                            video.srcObject = stream;
+                            video.play();
+                        });
+
+                    }
+                },
+                function (err) {
+                    console.log("The following error occured: " + err);
+                }
+            );
+        }
+        else {
+            console.log("getUserMedia not supported");
+        }
+
+        //var canvas, ctx;
+
+
+        $("#pagerefresh").click(function () {
+            $('#alert_popup').modal('hide');
+        });
+
+
+        //var videoId = 'video';
+        var scaleFactor = 1;
+
+        function capture(video, scaleFactor) {
+            if (scaleFactor == null) {
+                scaleFactor = 1;
+            }
+            var w = video.videoWidth * scaleFactor;
+            var h = video.videoHeight * scaleFactor;
+            var canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            var ctx = canvas.getContext('2d');
+
+            ctx.drawImage(video, 0, 0, w, h);
+            return canvas;
+        }
+
+
+        $("#snap_btn").click(function (e) {
+            if ($('#check_id').is(":checked")) {
+                var check = "Yes";
+            }
+            else {
+                var check = "No";
+            }
+
+            e.preventDefault();
+            $('#snap_btn').button('loading');
+            var random_gesture = $("#random_name").val();
+
+            var canvas = capture(video, scaleFactor);
+            var image = canvas.toDataURL('image/png');
+            var ImageSave = image.replace("data:image/png;base64,", "");
+            var image = JSON.stringify({ data: ImageSave, check: check, random_gesture: random_gesture, CheckIn: true });
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                datatype: "json",
+                data: image,
+                url: "/Home/VerifyAPI/",
+                success: function (data) {
+                    random_gesture_fn();
+                    console.log(data);
+                    if (data.Result == "Success") {
+                        $("#person_result").html(data.VerifiedName);
+                    }
+                    else {
+                        //console.log(data.Result);
+                        $("#errmsg").html(data.VerifiedName);
+                        $('#alert_popup').modal('show');
+                    }
+                    $('#snap_btn').button('reset');
+                }
+            });
+        });
+
+
+        $("#snap_btn_Checkout").click(function (e) {
+            if ($('#check_id').is(":checked")) {
+                var check = "Yes";
+            }
+            else {
+                var check = "No";
+            }
+
+            e.preventDefault();
+            $('#snap_btn_Checkout').button('loading');
+            var random_gesture = $("#random_name").val();
+
+            var canvas = capture(video, scaleFactor);
+            var image = canvas.toDataURL('image/png');
+            var ImageSave = image.replace("data:image/png;base64,", "");
+            var image = JSON.stringify({ data: ImageSave, check: check, random_gesture: random_gesture, CheckIn: false });
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                datatype: "json",
+                data: image,
+                url: "/Home/VerifyAPI/",
+                success: function (data) {
+                    random_gesture_fn();
+                    console.log(data);
+                    if (data.Result == "Success") {
+                        $("#person_result").html(data.VerifiedName);
+                    }
+                    else {
+                        //console.log(data.Result);
+                        $("#errmsg").html(data.VerifiedName);
+                        $('#alert_popup').modal('show');
+                    }
+                    $('#snap_btn_Checkout').button('reset');
+                }
+            });
+        });
+
+
+
+
+
+
+
+
+
+        $('#on_off_btn').click(function () {
+            if ($('#on_off_btn').prop("checked") == true) {
+
+                $('#cam_ctrl_div').hide();
+                $('#local_ctrl_div').show();
+                $('#local_snap_btn').prop('disabled', true);
+                $('#local_snap_btn_Checkout').prop('disabled', true);
+
+            }
+            else {
+                $('#cam_ctrl_div').show();
+                $('#local_ctrl_div').hide();
+                $('#local_snap_btn').prop('disabled', false);
+                $('#local_snap_btn_Checkout').prop('disabled', false);
+            }
+        });
+
+
+
+
+
+        var local_canvas, local_ctx;
+
+        local_canvas = document.getElementById("local_img");
+        local_ctx = local_canvas.getContext('2d');
+        var local_imageObj = new Image();
+
+        local_imageObj.onload = function () {
+            local_ctx.drawImage(local_imageObj, 0, 0, 300, 150);
+        };
+        local_imageObj.src = '/assets/images/empty.jpg';
+
+        $(function () {
+            $(":file").change(function () {
+                $('#local_snap_btn').prop('disabled', false);
+                $('#local_snap_btn_Checkout').prop('disabled', false);
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = imageIsLoaded;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+
+        var img_src_64;
+        function imageIsLoaded(e) {
+
+            img_src_64 = e.target.result;
+            var img_64_array = img_src_64.split(',');
+            var img_extension = img_64_array[0];
+
+            if (img_extension == "data:image/png;base64" || img_extension == "data:image/PNG;base64" || img_extension == "data:image/jpeg;base64" || img_extension == "data:image/JPEG;base64" || img_extension == "data:image/jpg;base64" || img_extension == "data:image/JPG;base64") {
+                local_imageObj.src = e.target.result;
+                $('#warn_msg').hide();
+            }
+            else {
+                $('#warn_msg').show();
+            }
+        };
+
+
+        $("#local_snap_btn").click(function (e) {
+            if ($('#local_check_id').is(":checked")) {
+                var local_check = "Yes";
+            }
+            else {
+                var local_check = "No";
+            }
+
+            e.preventDefault();
+            $('#local_snap_btn').button('loading');
+            var random_gesture = $("#random_name").val();
+
+            var img_64_array = img_src_64.split(',');
+            var image = JSON.stringify({ data: img_64_array[1], check: local_check, random_gesture: random_gesture, CheckIn: true });
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                datatype: "json",
+                data: image,
+                url: "/Home/VerifyAPI/",
+                success: function (data) {
+                    random_gesture_fn();
+                    console.log(data);
+                    if (data.Result == "Success") {
+                        $("#person_result").html(data.VerifiedName);
+                    }
+                    else {
+                        //console.log(data.Result);
+                        $("#errmsg").html(data.VerifiedName);
+                        $('#alert_popup').modal('show');
+                    }
+                    $('#local_snap_btn').button('reset');
+                }
+            });
+        });
+
+
+
+
+        $("#local_snap_btn_Checkout").click(function (e) {
+            if ($('#local_check_id').is(":checked")) {
+                var local_check = "Yes";
+            }
+            else {
+                var local_check = "No";
+            }
+
+            e.preventDefault();
+            $('#local_snap_btn_Checkout').button('loading');
+            var random_gesture = $("#random_name").val();
+
+            var img_64_array = img_src_64.split(',');
+            var image = JSON.stringify({ data: img_64_array[1], check: local_check, random_gesture: random_gesture, CheckIn: false });
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                datatype: "json",
+                data: image,
+                url: "/Home/VerifyAPI/",
+                success: function (data) {
+                    random_gesture_fn();
+                    console.log(data);
+                    if (data.Result == "Success") {
+                        $("#person_result").html(data.VerifiedName);
+                    }
+                    else {
+                        //console.log(data.Result);
+                        $("#errmsg").html(data.VerifiedName);
+                        $('#alert_popup').modal('show');
+                    }
+                    $('#local_snap_btn_Checkout').button('reset');
+                }
+            });
+        });
+
+
+        function imageopen() {
+            $('#open_image_file').trigger('click');
+        }
+
+        function random_gesture_fn() {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
@@ -204,129 +605,13 @@
                     console.log(data);
                     console.log(data.GestureName);
                     $("#gesture_name").html("Please Show Number " + data.GestureName + " as Gesture");
+                    $("#gesture_name_local").html("Please Show Number " + data.GestureName + " as Gesture");
                     $("#gesture_image").attr('src', data.GestureUrl);
                     $("#random_name").val(data.GestureName);
 
                 }
             });
-
-
-            navigator.getUserMedia = (navigator.getUserMedia ||
-                navigator.webkitGetUserMedia ||
-                navigator.mozGetUserMedia ||
-                navigator.msGetUserMedia);
-
-            var video;
-            var webcamStream; 1
-
-            if (navigator.getUserMedia) {
-                navigator.getUserMedia(
-
-                    {
-                        video: true,
-                        audio: false
-                    },
-                    function (localMediaStream) {
-                        video = document.querySelector('video');
-
-                        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-
-                                video.srcObject = stream;
-                                video.play();
-                            });
-
-                        }
-                    },
-                    function (err) {
-                        console.log("The following error occured: " + err);
-                    }
-                );
-            }
-            else {
-                console.log("getUserMedia not supported");
-            }
-
-            var canvas, ctx;
-
-
-            $("#pagerefresh").click(function () {
-                window.location.href = "verify";
-            });
-
-
-            var videoId = 'video';
-            var scaleFactor = 1;
-            var snapshots = [];
-
-            function capture(video, scaleFactor) {
-                if (scaleFactor == null) {
-                    scaleFactor = 1;
-                }
-                var w = video.videoWidth * scaleFactor;
-                var h = video.videoHeight * scaleFactor;
-                var canvas = document.createElement('canvas');
-                canvas.width = w;
-                canvas.height = h;
-                var ctx = canvas.getContext('2d');
-
-                ctx.drawImage(video, 0, 0, w, h);
-                return canvas;
-            }
-
-
-            $("#snap_btn").click(function (e) {
-                if ($('#check_id').is(":checked")) {
-                    var check = "Yes";
-                }
-                else {
-                    var check = "No";
-                }
-
-                e.preventDefault();
-                $('#snap_btn').button('loading');
-                var random_gesture = $("#random_name").val();
-
-                var canvas = capture(video, scaleFactor);
-                var blobData = canvas.toDataURL();
-
-                var image = canvas.toDataURL('image/png');
-                var resultimg = image;
-                var ImageSave = image.replace("data:image/png;base64,", "");
-                var image = JSON.stringify({ data: ImageSave, check: check, random_gesture: random_gesture });
-
-                console.log(check);
-                //console.log(image);
-
-                $.ajax({
-                    type: "POST",
-                    contentType: "application/json",
-                    datatype: "json",
-                    data: image,
-                    url: "/Home/VerifyAPI/",
-                    success: function (data) {
-                        console.log(data);
-                        if (data.Result == "Success")
-                        {
-                            $("#person_result").html(data.VerifiedName);
-                        }
-                        else {
-                            //console.log(data.Result);
-                            $("#errmsg").html(data.VerifiedName);
-                            $('#alert_popup').modal('show');
-                        }
-                        $('#snap_btn').button('reset');
-                    }
-                });
-
-
-
-                snapshots.unshift(canvas);
-            });
-        });
-
-
-
+        }
 
     </script>
 </body>
