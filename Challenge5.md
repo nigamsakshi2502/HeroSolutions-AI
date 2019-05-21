@@ -300,7 +300,7 @@ public async Task&lt;JsonResult&gt; DocumentVerification(string data)
 <li>Turn off the Live Streamming and select the Browse Button</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Quality_Check/Model1_output/output_2.PNG" alt="image" style="max-width:100%;">&nbsp;
 <li>Open the Right image from the folder</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/OCR/2.PNG" alt="image" style="max-width:100%;">&nbsp;
+<img src="http://139.59.61.161/MSWorkshop2019/OCR/2.png" alt="image" style="max-width:100%;">&nbsp;
 <li>Below is the screenshot of the Right image</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/OCR/3.PNG" alt="image" style="max-width:100%;">&nbsp;
 <li>Select the wrong file type</li>&nbsp;
