@@ -354,7 +354,7 @@ public class ImageValidationHandler
 <li>Open SQL Server Management Studio</li>
 <li>To connect with the Azure SQL Server, you have to provide Server name, Login and Password details.</li>
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/1.jpg" style="max-width:100%;">
-<p>Download the script file from the GitHub and run <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/HOL_Script.sql">Link for Script File</a></p> 
+<p>Download the script file from the GitHub and run<a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/HOL_Script.sql">Link for Script File</a> </p> 
 <h2>Screens to demonstrate how to run the script file</h2>
 <li>Open the script file from the path where you have saved the downloaded GIT script file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/2.jpg" style="max-width:100%;">&nbsp;
