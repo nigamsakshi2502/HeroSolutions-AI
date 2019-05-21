@@ -342,8 +342,8 @@ public static List&lt;List&lt;string&gt;&gt; User_Registration(string name, stri
 </strong>
 </ol>
 <ol>
-    <strong>
-        <li>Replace the whole code of User_ImageValidation() in Facade.cs</li>
+<strong>
+    <li>Replace the whole code of User_ImageValidation() in Facade.cs</li>
         <blockquote>
             <pre>
                 <code>
