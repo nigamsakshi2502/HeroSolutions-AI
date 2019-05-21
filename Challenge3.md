@@ -638,70 +638,20 @@ public JsonResult VerifyAPI(string data, string random_gesture, bool CheckIn)
 <h3>Invoking Audit Log</h3>
 <ol>
     <strong>
-        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureShow' Function Code here...'</li>
+        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_AuditLogShow' Function Code here...'</li>
         <blockquote>
             <pre>
                 <code>
-public static List&lt;gesture_management&gt; Admin_GestureShow()
+public static List<audit_log> Admin_AuditLogShow()
 {
-  GestureTable gstobj = new GestureTable();
+            AuditLoggerTable altobj = new AuditLoggerTable();
 &nbsp;
-  return gstobj.List();
+            return altobj.List();
 }
-                </code>
+</code>
             </pre>
         </blockquote>
     </strong>
-<strong>
-        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureEdit' Function Code here...'</li>
-        <blockquote>
-            <pre>
-                <code>
-public static gesture_management Admin_GestureEdit(string id)
-{
-   GestureTable gt = new GestureTable();
-   &nbsp;
-   return gt.Edit(id);
-}
-                </code>
-            </pre>
-        </blockquote>
-</strong>
-<strong>
-        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureUpdate' Function Code here...'</li>
-        <blockquote>
-            <pre>
-                <code>
-public static bool Admin_GestureUpdate(string id, String isactive)
-{
-    GestureTable gt = new GestureTable();
-    &nbsp;
-    return gt.Update(id,isactive);
-}
-                </code>
-            </pre>
-        </blockquote>
-</strong>
-<strong>
-        <li>Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the 'Admin_GestureAdd' Function Code here...'</li>
-        <blockquote>
-            <pre>
-                <code>
-public static bool Admin_GestureAdd(string gesture_name, string thumbnail_url, string gesture_message, string isactive)
-{
-    GestureTable gstobj = new GestureTable();
-&nbsp;
-    if (gstobj.Add (gesture_name, thumbnail_url, gesture_message, isactive))
-    {
-        return true;
-    }
-&nbsp;
-    return false;
-}
-                </code>
-            </pre>
-        </blockquote>
-</strong>
 <ol>
 <strong>
    <li>Paste the code given below in 'HomeController.cs', (i.e) Replace the whole ActionResult 'audit_log'</li>
