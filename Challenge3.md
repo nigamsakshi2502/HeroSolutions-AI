@@ -642,7 +642,7 @@ public JsonResult VerifyAPI(string data, string random_gesture, bool CheckIn)
         <blockquote>
             <pre>
                 <code>
-public static List<audit_log> Admin_AuditLogShow()
+public static List&lt;audit_log&gt; Admin_AuditLogShow()
 {
             AuditLoggerTable altobj = new AuditLoggerTable();
 &nbsp;
