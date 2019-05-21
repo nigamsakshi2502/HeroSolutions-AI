@@ -639,6 +639,7 @@ public static bool Admin_GestureAdd(string gesture_name, string thumbnail_url, s
 </blockquote>
 </strong>
 </ol>
+<p>Now you can run and check the Audit Log outputs</p>
 <li></li>
     <img src="" alt="image" style="max-width: 100%;">
 </ol>

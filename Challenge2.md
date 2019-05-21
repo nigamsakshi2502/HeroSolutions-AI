@@ -125,7 +125,7 @@ public class GestureHandler
 </blockquote>
 </strong>
 </ol>
-<h2>Azure SQL Server Database Connectivity</h2>
+<h2>Azure SQL Server Table Updates</h2>
 <h3>Code snippet demonstrating the implementation of StorageHandler.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the StorageHandler.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Class/StorageHandler.PNG" alt="image" style="max-width:100%;">&nbsp;
