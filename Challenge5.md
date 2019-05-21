@@ -64,6 +64,7 @@
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/9.jpg" alt="image" style="max-width: 100%;">
         <li>Copy Key and Endpoint</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/10.jpg" alt="image" style="max-width: 100%;">
+        <li>Download the LUIS Json file from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/e569a3f6-4254-4060-a326-3a6372d0b419_v0.1.json">GitHub</a></li>
         <li>Paste the 'LUIS_EndPoint', 'LUIS_AppID' and 'LUIS_Key' in Web.Config</li>
     </strong>
 </ol>
