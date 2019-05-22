@@ -377,9 +377,9 @@ public class ImageValidationHandler
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/10.jpg" style="max-width:100%;">&nbsp;
 <h3>Azure SQL Server Connectivity through Azure Portal</h3>
     <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
-    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_1.jpg" alt="image" style="max-width: 100%;">
-    <li>Enter your Password</li>
-    <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_2.jpg" alt="image" style="max-width: 100%;">
+    <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.JPG" alt="image" style="max-width: 100%;">
+    <li>Enter your Password [W!pro!Azure1]</li>
+    <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">
     <li>Click on SQL databases tab in the left pane</li>
     <img src="http://139.59.61.161/MSWorkshop2019/sql/sql1.jpg" alt="image" style="max-width: 100%;">
     <li>Select your particular database</li>
