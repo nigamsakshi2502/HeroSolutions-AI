@@ -30,8 +30,8 @@
         <blockquote>
             <pre>
                 <code>
-                    &lt;add key="GesturePredictionKey" value=""/&gt;
-                    &lt;add key="GestureIteration" value=""/&gt;
+&lt;add key="GesturePredictionKey" value=""/&gt;
+&lt;add key="GestureIteration" value=""/&gt;
                 </code>
             </pre>
         </blockquote>
