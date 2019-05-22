@@ -229,7 +229,7 @@ public class ImageValidationHandler
                     var sadness = item["faceAttributes"]["emotion"]["sadness"];
                     var surprise = item["faceAttributes"]["emotion"]["surprise"];
 &nbsp;
-                    if ((float)anger > 0.1 && (float)sadness > 0.1 && (float)surprise > 0.1)
+                    if ((float)anger > 0.1 || (float)sadness > 0.1 || (float)surprise > 0.1)
                     {
                         isemotions = false;
                     }
