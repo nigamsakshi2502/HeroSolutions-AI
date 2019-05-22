@@ -147,7 +147,7 @@ public static byte[] storetoserver(string base64data)
       <li>To start with, update the API Key and Endpoint in Web.Config</li>
       <li>Navigate to Web.Config</li>
       <li>Paste the Endpoint in 'FaceAPIEndPoint' and Key in 'FaceAPIKey'</li>
-      <li><b>NOTE : Paste the endpoint only till '.com', example : 'https://southeastasia.api.cognitive.microsoft.com'</b></li>
+      <li>NOTE : Paste the endpoint only till '.com', example : &apos;https://southeastasia.api.cognitive.microsoft.com&apos;</li>
       &nbsp;
         <img src="http://139.59.61.161/MSWorkshop2019/Invoke_StarterKit/7.PNG" alt="image" style="max-width: 100%;"></strong>
         &nbsp;
