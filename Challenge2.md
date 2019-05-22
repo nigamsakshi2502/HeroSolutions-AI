@@ -34,8 +34,8 @@
 &lt;add key="GestureIteration" value=""/&gt;
                 </code>
             </pre>
-        </blockquote>
-    <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">
+        </blockquote>&nbsp;
+    <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">&nbsp;
     <li>Now paste the values for prediction-key in GesturePredictionKey and iteration in GestureIteration</li>
     </strong>
 </ol>
