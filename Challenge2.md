@@ -12,7 +12,7 @@
 <h3>Invoke the Gesture Management API</h3>
 <ol>
   <strong>
-      <li>To start with, update the API Key and Endpoint in Web.Config</li>
+      <li>To start with, have to update the API Key, Endpoint, Prediction Key and Iteration name in Web.Config</li>
       <li>Train your model in 'customvision.ai'</li>
       <li>After training your model publish it</li>
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom1.jpg" alt="image" style="max-width: 100%;">
@@ -27,7 +27,6 @@
       <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/output/12.PNG" alt="image" style="max-width: 100%;"></strong>
       <li>Below the GestureKey, paste the below code</li>
       <strong>
-        <li>Paste the below code in web.config, (i.e) below 'GestureKey'</li>
         <blockquote>
             <pre>
                 <code>
