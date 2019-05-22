@@ -13,11 +13,32 @@
 <ol>
   <strong>
       <li>To start with, update the API Key and Endpoint in Web.Config</li>
-      <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
+      <li>Train your model in 'customvision.ai'</li>
+      <li>After training your model publish it</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom1.jpg" alt="image" style="max-width: 100%;">
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom2.jpg" alt="image" style="max-width: 100%;">
+      <li>Click on Prediction URL</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom3.jpg" alt="image" style="max-width: 100%;">
+      <li>Grab your endpoint, prediction-key and iteration name. [Example endpoint : 'https://southeastasia.api.cognitive.microsoft.com']</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom4.jpg" alt="image" style="max-width: 100%;">
       <li>Follow the picture shown below to navigate to the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
       <li>Copy and paste the Endpoint in 'GestureAPICall', Key in 'GestureKey' for invoking Gesture Management API.</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/output/12.PNG" alt="image" style="max-width: 100%;"></strong>
+      <li>Below the GestureKey, paste the below code</li>
+      <strong>
+        <li>Paste the below code in web.config, (i.e) below 'GestureKey'</li>
+        <blockquote>
+            <pre>
+                <code>
+                    <add key="GesturePredictionKey" value=""/>
+                    <add key="GestureIteration" value=""/>
+                </code>
+            </pre>
+        </blockquote>
+    </strong>
+    <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">
+    <li>Now paste the values for prediction-key in GesturePredictionKey and iteration in GestureIteration</li>
 </ol>
 <h3>Getting started with coding - here we will implement the GestureHandler.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the GestureHandler.cs file</li>&nbsp;
@@ -33,7 +54,7 @@
 public class GestureHandler
 {
     //Assigning Subscription Key and Face Endpoint from web.config file
-    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"];
+    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"], GesturePredictionKey = ConfigurationManager.AppSettings["GesturePredictionKey"], GestureIteration = ConfigurationManager.AppSettings["GestureIteration"];
     public string error = "";
 &nbsp;
     //DB check
@@ -45,7 +66,7 @@ public class GestureHandler
         try
         {
             //Gesture API Call
-            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/a69b9265-0748-4bb3-b926-8ba27abe41ac/detect/iterations/Iteration1/image");
+            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/"+ GesturePredictionKey + "/detect/iterations/"+ GestureIteration +"/image");
             var request1 = new RestRequest(Method.POST);
             request1.AddHeader("cache-control", "no-cache");
             request1.AddHeader("Content-Type", "application/octet-stream");
