@@ -19,24 +19,27 @@
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom2.jpg" alt="image" style="max-width: 100%;">
       <li>Click on Prediction URL</li>
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom3.jpg" alt="image" style="max-width: 100%;">
-      <li>Grab your endpoint, prediction-key and iteration name. [Example endpoint : 'https://southeastasia.api.cognitive.microsoft.com']</li>
+      <li>Grab your endpoint, project-id and iteration name. [Example endpoint : 'https://southeastasia.api.cognitive.microsoft.com']</li>
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom6.jpg" alt="image" style="max-width: 100%;">
       <li>Follow the picture shown below to navigate to the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <li>Copy and paste the Endpoint in 'GestureAPICall', Key in 'GestureKey' for invoking Gesture Management API.</li>&nbsp;
+      <li>Copy and paste the Endpoint in 'GestureAPICall', Prediction Key in 'GestureKey' for invoking Gesture Management API.</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/output/12.PNG" alt="image" style="max-width: 100%;">
       <li>Below the GestureKey, paste the below code</li>
       <strong>
         <blockquote>
             <pre>
                 <code>
-&lt;add key="GesturePredictionKey" value=""/&gt;
+&lt;add key="GestureProjectID" value=""/&gt;
 &lt;add key="GestureIteration" value=""/&gt;
                 </code>
             </pre>
         </blockquote>&nbsp;
     <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">&nbsp;
-    <li>Now paste the values for prediction-key in GesturePredictionKey and iteration in GestureIteration [example iteration name is 'Iteration1']</li>
+    <li>Copy your Project ID</li>&nbsp;
+    <img src="http://139.59.61.161/MSWorkshop2019/custom/custom7.jpg" alt="image" style="max-width:100%;">&nbsp;
+    <img src="http://139.59.61.161/MSWorkshop2019/custom/custom8.jpg" alt="image" style="max-width:100%;">&nbsp;
+    <li>Now paste the values for project-id in GestureProjectID and iteration in GestureIteration [example iteration name is 'Iteration1']</li>
     </strong>
 </ol>
 <h3>Getting started with coding - here we will implement the GestureHandler.cs file</h3>
@@ -53,7 +56,7 @@
 public class GestureHandler
 {
     //Assigning Subscription Key and Face Endpoint from web.config file
-    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"], GesturePredictionKey = ConfigurationManager.AppSettings["GesturePredictionKey"], GestureIteration = ConfigurationManager.AppSettings["GestureIteration"];
+    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"], GestureProjectID = ConfigurationManager.AppSettings["GestureProjectID"], GestureIteration = ConfigurationManager.AppSettings["GestureIteration"];
     public string error = "";
 &nbsp;
     //DB check
@@ -65,7 +68,7 @@ public class GestureHandler
         try
         {
             //Gesture API Call
-            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/"+ GesturePredictionKey + "/detect/iterations/"+ GestureIteration +"/image");
+            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/"+ GestureProjectID + "/detect/iterations/"+ GestureIteration +"/image");
             var request1 = new RestRequest(Method.POST);
             request1.AddHeader("cache-control", "no-cache");
             request1.AddHeader("Content-Type", "application/octet-stream");
