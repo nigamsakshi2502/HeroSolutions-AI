@@ -12,7 +12,7 @@
 <h3>Invoke the Gesture Management API</h3>
 <ol>
   <strong>
-      <li>To start with, have to update the API Key, Endpoint, Prediction Key and Iteration name in Web.Config</li>
+      <li>To start with, have to update the API Prediction Key, Endpoint, Project ID and Iteration name in Web.Config</li>
       <li>Train your model in 'customvision.ai'</li>
       <li>After training your model publish it</li>
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom1.jpg" alt="image" style="max-width: 100%;">
@@ -35,7 +35,7 @@
                 </code>
             </pre>
         </blockquote>&nbsp;
-    <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">&nbsp;
+    <img src="http://139.59.61.161/MSWorkshop2019/custom/new.PNG" alt="image" style="max-width:100%;">&nbsp;
     <li>Copy your Project ID</li>&nbsp;
     <img src="http://139.59.61.161/MSWorkshop2019/custom/custom7.jpg" alt="image" style="max-width:100%;">&nbsp;
     <img src="http://139.59.61.161/MSWorkshop2019/custom/custom8.jpg" alt="image" style="max-width:100%;">&nbsp;
