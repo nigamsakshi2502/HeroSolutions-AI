@@ -140,8 +140,8 @@ CREATE TABLE voice(id int NOT NULL IDENTITY PRIMARY KEY, voiceid varchar(100), n
 		<li>Copy your Connection string</li>
 		<img src="http://139.59.61.161/MSWorkshop2019/sql/sql8.jpg" alt="image" style="max-width: 100%;">
 		<h4>Paste your SQL server connection string in Web.config (i.e) for the key 'connectionstring', in the connection string specify your database user name and password, make 'MultipleActiveResultSets' as True</h4>
-		<p>Sample Connectionstring : "Server=tcp:jsn.database.windows.net,1433;Initial Catalog=dbname;Persist Security Info=False;User ID=demouser; Password=demo@pass123;MultipleActiveResultSets=True;Encrypt=True; TrustServerCertificate=False;Connection Timeout=30;"</p>
 		<li>Make sure your changing the database name to your database name [(i.e) Initial Catalog= your_db_name]</li>
+		<li>Sample Connectionstring : "Server=tcp:jsn.database.windows.net,1433;Initial Catalog=dbname;Persist Security Info=False;User ID=demouser; Password=demo@pass123;MultipleActiveResultSets=True;Encrypt=True; TrustServerCertificate=False;Connection Timeout=30;"</li>
 	</strong>
 </ol>
 <h3>Speaker Verification</h3>
