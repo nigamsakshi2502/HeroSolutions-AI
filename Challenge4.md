@@ -32,7 +32,6 @@
                 </code>
             </pre>
         </blockquote>
-        <li></li>
     </strong>
 <li>Copy and paste the Endpoint in 'QualityEndPoint', Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', IterationID in 'QualityIterationID' in both the model files</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/custom/webconfig.PNG" alt="image" style="max-width: 100%;"></strong>
