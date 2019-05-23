@@ -28,7 +28,8 @@
 <li>Copy your Connection string</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql8.jpg" alt="image" style="max-width: 100%;">
 <h4>Paste your SQL server connection string in Web.config (i.e) for the key 'AzureSqlConnectionString', in the connection string specify your database user name and password, make 'MultipleActiveResultSets' as True</h4>
-<p>Sample Connectionstring : "Server=tcp:jsn.database.windows.net,1433;Initial Catalog=dbname;Persist Security Info=False;User ID=demouser; Password=demo@pass123;MultipleActiveResultSets=True;Encrypt=True; TrustServerCertificate=False;Connection Timeout=30;"</p>
+<li>Make sure your changing the database name to your database name [(i.e) Initial Catalog= your_db_name]</li>
+<li>Sample Connectionstring : "Server=tcp:jsn.database.windows.net,1433;Initial Catalog=dbname;Persist Security Info=False;User ID=demouser; Password=demo@pass123;MultipleActiveResultSets=True;Encrypt=True; TrustServerCertificate=False;Connection Timeout=30;"</li>
 <h3>Design Changes</h3>
 <ol>
 	<strong>
@@ -51,9 +52,9 @@
 			<pre>
 				<code>
 &lt;button class="open-button" id="open_button" onclick="openForm()"&gt;&lt;i class="fa fa-comments" style="font-size: 30px;color:white;"&gt;&lt;/i&gt;&lt;/button&gt;
-
+&nbsp;
 &lt;div class="chat-popup" id="myForm" style="z-index:999999;"&gt;
-
+&nbsp;
 &lt;form class="form-container"&gt;
 &lt;h6 style="color:black;float:left"&gt;Task Management&lt;/h6&gt;
 &lt;button type="button" class="btn cancel" onclick="closeForm()" style="background:transparent;padding:0px;margin:0px;float:right;width:10%;"&gt;&lt;i class="fa fa-window-close" style="font-size: 20px;color:black;margin-top:5px;"&gt;&lt;/i&gt;&lt;/button&gt;
