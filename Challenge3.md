@@ -13,7 +13,7 @@
       <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
       <li>Open Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <li>Enter the values for 'FaceIDSubscriptionKey', 'FaceIDEndpoint' and 'PersonGroupId'.</li>&nbsp;
+      <li>Enter the values for 'FaceIDSubscriptionKey', 'FaceIDEndpoint' and 'PersonGroupId'. [NOTE : To know how to create group id, check Challenge 1 Document]</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Register/register_WebConfig.PNG" alt="image" style="max-width:100%;">
   </strong>
 </ol>
