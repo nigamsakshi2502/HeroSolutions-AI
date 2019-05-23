@@ -5,7 +5,7 @@
 <h3>Prerequisites</h3>
 <ol>
 <li>Kindly ensure that the application works fine so far.</li>
-<li>We are going to build the NLP based Chat bot for Task Management in the same application</li>
+<li>We are going to build the NLP based Chat bot for Task Management in the same application</li></ol>
 <h3>Code Summary</h3>
 <p></p>
 <h3>Azure SQL Server Connectivity through Azure Portal</h3>
@@ -31,4 +31,3 @@
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql8.jpg" alt="image" style="max-width: 100%;">
 <h4>Paste your SQL server connection string in Web.config (i.e) for the key 'AzureSqlConnectionString', in the connection string specify your database user name and password, make 'MultipleActiveResultSets' as True</h4>
 <p>Sample Connectionstring : "Server=tcp:jsn.database.windows.net,1433;Initial Catalog=dbname;Persist Security Info=False;User ID=demouser; Password=demo@pass123;MultipleActiveResultSets=True;Encrypt=True; TrustServerCertificate=False;Connection Timeout=30;"</p>
-</ol>
