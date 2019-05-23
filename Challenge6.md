@@ -58,7 +58,7 @@
 &lt;h6 style="color:black;float:left"&gt;Task Management&lt;/h6&gt;
 &lt;button type="button" class="btn cancel" onclick="closeForm()" style="background:transparent;padding:0px;margin:0px;float:right;width:10%;"&gt;&lt;i class="fa fa-window-close" style="font-size: 20px;color:black;margin-top:5px;"&gt;&lt;/i&gt;&lt;/button&gt;
 &lt;iframe style="width:100%;height:450px;" src="https://webchat.botframework.com/embed/victory?s=HY-AAbU9GUs.cwA.hbA.dZeQsadDNIMNMb-ovGOmO8NrRoxeYSEE8MvtZDEdHao" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;
-
+&nbsp;
 &lt;/form&gt;
 &lt;/div&gt;
 				</code>
