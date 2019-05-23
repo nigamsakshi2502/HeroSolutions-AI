@@ -166,11 +166,11 @@ public class QualityControlChecker
                         //checking the probability 
                         if (pred.tagName == "Accurate-Space")
                         {
-                            TagName = "Pass " + pred.tagName;
+                            TagName = "Pass ";
                         }
                         else
                         {
-                            TagName = "Fail " + pred.tagName;
+                            TagName = "Fail ";
                         }
                     }
                     else
