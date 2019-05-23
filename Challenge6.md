@@ -32,19 +32,19 @@
 <h3>Design Changes</h3>
 <ol>
 	<strong>
-	<li>Navigate to index.cshtml</li>
+	<li>Navigate to index.cshtml</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot4.PNG" alt="image" style="max-width: 100%;">&nbsp;
-	<li>Navigate to the code line specified in the below image</li>
+	<li>Navigate to the code line specified in the below image</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot3.PNG" alt="image" style="max-width: 100%;">&nbsp;
 	<li>Paste the below code</li>
 		<blockquote>
 			<pre>
 				<code>
-					&lt;link rel="stylesheet" type="text/css" href="http://139.59.61.161/MSWorkshop2019/chatbot.css"/&gt;
+&lt;link rel="stylesheet" type="text/css" href="http://139.59.61.161/MSWorkshop2019/chatbot.css"/&gt;
 				</code>
 			</pre>
 		</blockquote>
-	<li>Scroll to the code line specified in the below image</li>
+	<li>Scroll to the code line specified in the below image</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot51.PNG" alt="image" style="max-width: 100%;">&nbsp;
 	<li>Paste the below code</li>
 		<blockquote>
