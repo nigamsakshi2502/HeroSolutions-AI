@@ -22,7 +22,7 @@
 <li>Specify your database password</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql5.jpg" alt="image" style="max-width: 100%;">
 <li>Copy all the queries from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/BotDB_Script.sql">sql script file</a></li>
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql4.jpg" alt="image" style="max-width: 100%;">   
+<img src="http://139.59.61.161/MSWorkshop2019/Bot.PNG" alt="image" style="max-width: 100%;">   
 <li>Paste all the queries in the editor pane and click on Run button</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql6.jpg" alt="image" style="max-width: 100%;">
 <li>Now click on Connection strings tab in the left pane</li>
