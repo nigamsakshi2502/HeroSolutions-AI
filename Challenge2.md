@@ -20,7 +20,7 @@
       <li>Click on Prediction URL</li>
       <img src="http://139.59.61.161/MSWorkshop2019/custom/custom3.jpg" alt="image" style="max-width: 100%;">
       <li>Grab your endpoint, prediction-key and iteration name. [Example endpoint : 'https://southeastasia.api.cognitive.microsoft.com']</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom4.jpg" alt="image" style="max-width: 100%;">
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom5.jpg" alt="image" style="max-width: 100%;">
       <li>Follow the picture shown below to navigate to the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
       <li>Copy and paste the Endpoint in 'GestureAPICall', Key in 'GestureKey' for invoking Gesture Management API.</li>&nbsp;
