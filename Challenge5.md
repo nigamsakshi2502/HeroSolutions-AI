@@ -45,6 +45,7 @@
 <h3>Importing the LUIS Model</h3>
 <ol>
     <strong>
+        <li>Download the LUIS Json file from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/e569a3f6-4254-4060-a326-3a6372d0b419_v0.1.json">GitHub</a></li>
         <li>Login to Luis.ai</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/1.jpg" alt="image" style="max-width: 100%;">
         <li>Enter your username</li>
@@ -60,12 +61,11 @@
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/7.jpg" alt="image" style="max-width: 100%;">
         <li>Click on Manage</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/8.jpg" alt="image" style="max-width: 100%;">
-        <li>Copy the application ID</li>
+        <li>Copy the Application ID</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/9.jpg" alt="image" style="max-width: 100%;">
         <li>Copy Key and Endpoint</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/10.jpg" alt="image" style="max-width: 100%;">
-        <li>Download the LUIS Json file from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/e569a3f6-4254-4060-a326-3a6372d0b419_v0.1.json">GitHub</a></li>
-        <li>Paste the 'LUIS_EndPoint', 'LUIS_AppID' and 'LUIS_Key' in Web.Config</li>
+        <li>Paste the Endpoint in 'LUIS_EndPoint', Application ID in 'LUIS_AppID' and Key 'LUIS_Key' in Web.Config [NOTE : Paste the endpoint only till 'v2.0/apps/' (example endpoint : "https://westus2.api.cognitive.microsoft.com/luis/v2.0/apps/")]</li>
     </strong>
 </ol>
 <h3>Getting started with coding - here we will implement the DocumentVerificationHandler.cs file</h3>
