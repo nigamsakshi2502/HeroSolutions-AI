@@ -64,5 +64,25 @@
 				</code>
 			</pre>
 		</blockquote>
+	<li>Scroll to the code line specified in the below image</li>&nbsp;
+	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot6.PNG" alt="image" style="max-width: 100%;">&nbsp;
+	<li>Paste the below code</li>
+		<blockquote>
+			<pre>
+				<code>
+&lt;script&gt;
+	function openForm()
+	{
+	document.getElementById("myForm").style.visibility = "visible";
+	}
+&nbsp;
+	function closeForm()
+	{
+	document.getElementById("myForm").style.visibility = "hidden";
+	}
+&lt;/script&gt;
+				</code>
+			</pre>
+		</blockquote>
 	</strong>
 </ol>
