@@ -33,7 +33,7 @@
             </pre>
         </blockquote>
     </strong>
-<li>Copy and paste the Endpoint in 'QualityEndPoint', Prediction Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', IterationID in 'QualityIterationID' in both the model files</li>&nbsp;
+<li>Copy and paste the Endpoint in 'QualityEndPoint', Prediction Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', Iteration name in 'QualityIterationID' in both the model files</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/custom/webconfig.PNG" alt="image" style="max-width: 100%;"></strong>
 <h3>Getting started with coding - here we will implement the QualityControlChecker.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the QualityControlChecker.cs file</li>&nbsp;
