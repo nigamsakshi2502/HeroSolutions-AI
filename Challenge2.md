@@ -36,7 +36,7 @@
             </pre>
         </blockquote>&nbsp;
     <img src="http://139.59.61.161/MSWorkshop2019/custom/web.PNG" alt="image" style="max-width:100%;">&nbsp;
-    <li>Now paste the values for prediction-key in GesturePredictionKey and iteration in GestureIteration</li>
+    <li>Now paste the values for prediction-key in GesturePredictionKey and iteration in GestureIteration [example iteration name is 'Iteration1']</li>
     </strong>
 </ol>
 <h3>Getting started with coding - here we will implement the GestureHandler.cs file</h3>
