@@ -148,7 +148,7 @@ CREATE TABLE voice(id int NOT NULL IDENTITY PRIMARY KEY, voiceid varchar(100), n
 	<strong>
 		<li>Open SpeakerIdentification project and navigate to Web.config</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/SpeechDemo/speaker/verification1.jpg" alt="image" style="max-width: 100%;">&nbsp;
-		<li>Enter your EndPoint, VoiceKey and connectionstring [NOTE : Paste the endpoint only till '.com', example : 'https://westus.api.cognitive.microsoft.com', for getting connectionstring follow the above procedure]</li>&nbsp;
+		<li>Enter your EndPoint, VoiceKey [NOTE : Paste the endpoint only till '.com', example : 'https://westus.api.cognitive.microsoft.com']</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/SpeechDemo/speaker/verification2.jpg" alt="image" style="max-width: 100%;">&nbsp;
 	</strong>
 </ol>
