@@ -59,6 +59,11 @@
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/6.jpg" alt="image" style="max-width: 100%;">
         <li>Enter name</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/7.jpg" alt="image" style="max-width: 100%;">
+        <li>Click on Train button</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/custom/LUIS2.jpg" alt="image" style="max-width: 100%;">
+        <li>After training is completed, click on Publish button</li>
+        <img src="http://139.59.61.161/MSWorkshop2019/custom/LUIS3.jpg" alt="image" style="max-width: 100%;">
+        <img src="http://139.59.61.161/MSWorkshop2019/custom/LUIS1.JPG" alt="image" style="max-width: 100%;">
         <li>Click on Manage</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/8.jpg" alt="image" style="max-width: 100%;">
         <li>Copy the Application ID</li>
