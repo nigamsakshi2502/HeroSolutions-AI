@@ -15,9 +15,27 @@
       <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
       <li>Follow the screenshot shown below to navigate to the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <li>Copy and paste the Endpoint in 'QualityEndPoint', Key in 'QualitySubcriptionKey', PredictionKey in 'QualityPredictionKey', IterationID in 'QualityIterationID' in both the model files</li>&nbsp;
-      <img src="http://139.59.61.161/MSWorkshop2019/Quality_Check/QCC_4.PNG" alt="image" style="max-width: 100%;"></strong>
-</ol>
+      <strong>
+        <li>Replace the below code in Web.config</li>
+        <blockquote>
+            <pre>
+                <code>
+&lt;add key="QualityEndPoint_model1" value="https://southeastasia.api.cognitive.microsoft.com" /&gt;
+&lt;add key="QualityPredictionKey_model1" value="" /&gt;
+&lt;add key="QualityProjectID_model1" value="" /&gt;
+&lt;add key="QualityIterationID_model1" value="" /&gt;
+
+&lt;add key="QualityEndPoint_model2" value="https://southeastasia.api.cognitive.microsoft.com" /&gt;
+&lt;add key="QualityPredictionKey_model2" value="" /&gt;
+&lt;add key="QualityProjectID_model2" value="" /&gt;
+&lt;add key="QualityIterationID_model2" value="" /&gt;
+                </code>
+            </pre>
+        </blockquote>
+        <li></li>
+    </strong>
+<li>Copy and paste the Endpoint in 'QualityEndPoint', Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', IterationID in 'QualityIterationID' in both the model files</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/webconfig.PNG" alt="image" style="max-width: 100%;"></strong>
 <h3>Getting started with coding - here we will implement the QualityControlChecker.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the QualityControlChecker.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Class/QualityControlChecker.PNG" alt="image" style="max-width:100%;">&nbsp;
@@ -30,8 +48,8 @@
 public class QualityControlChecker
 {
     //Assigning Subscription Key and Face Endpoint from web.config file
-    private static string QualityAPIKey_model1 = ConfigurationManager.AppSettings["QualitySubcriptionKey_model1"], QualityAPIEndpoint_model1 = ConfigurationManager.AppSettings["QualityEndPoint_model1"], QualityPredictionKey_model1 = ConfigurationManager.AppSettings["QualityPredictionKey_model1"], QualityIterationID_model1 = ConfigurationManager.AppSettings["QualityIterationID_model1"];
-    private static string QualityAPIKey_model2 = ConfigurationManager.AppSettings["QualitySubcriptionKey_model2"], QualityAPIEndpoint_model2 = ConfigurationManager.AppSettings["QualityEndPoint_model2"], QualityPredictionKey_model2 = ConfigurationManager.AppSettings["QualityPredictionKey_model2"], QualityIterationID_model2 = ConfigurationManager.AppSettings["QualityIterationID_model2"];
+    private static string QualityPredictionKey_model1 = ConfigurationManager.AppSettings["QualityPredictionKey_model1"], QualityAPIEndpoint_model1 = ConfigurationManager.AppSettings["QualityEndPoint_model1"], QualityProjectID_model1 = ConfigurationManager.AppSettings["QualityProjectID_model1"], QualityIterationID_model1 = ConfigurationManager.AppSettings["QualityIterationID_model1"];
+    private static string QualityPredictionKey_model2 = ConfigurationManager.AppSettings["QualityPredictionKey_model2"], QualityAPIEndpoint_model2 = ConfigurationManager.AppSettings["QualityEndPoint_model2"], QualityProjectID_model2 = ConfigurationManager.AppSettings["QualityProjectID_model2"], QualityIterationID_model2 = ConfigurationManager.AppSettings["QualityIterationID_model2"];
 &nbsp;
     public string error = "";
     public string TagName = "";
@@ -49,10 +67,10 @@ public class QualityControlChecker
                     //checking the flag is true then execute the URL Image
                     if (flag)
                     {
-                        var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/url");
+                        var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityProjectID_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/url");
                         var request = new RestRequest(Method.POST);
                         request.AddHeader("Content-Type", "application/json");
-                        request.AddHeader("Prediction-Key", QualityAPIKey_model1);
+                        request.AddHeader("Prediction-Key", QualityPredictionKey_model1);
                         request.AddParameter("undefined", "{\"Url\": \"" + data + "\"}", ParameterType.RequestBody);
                         IRestResponse response = client.Execute(request);
                         result = response.Content;
@@ -63,10 +81,10 @@ public class QualityControlChecker
                     {
                         var imagebytes = Convert.FromBase64String(data);
 &nbsp;
-                        var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/image");
+                        var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityProjectID_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/image");
                         var request = new RestRequest(Method.POST);
                         request.AddHeader("Content-Type", "application/octet-stream");
-                        request.AddHeader("Prediction-Key", QualityAPIKey_model1);
+                        request.AddHeader("Prediction-Key", QualityPredictionKey_model1);
                         request.AddParameter("data", imagebytes, ParameterType.RequestBody);
                         IRestResponse response = client.Execute(request);
                         result = response.Content;
@@ -96,7 +114,7 @@ public class QualityControlChecker
                     {
                         TagName = "Cound not find any object";
                     }
-&nbsp;                                       
+       &nbsp;             
                 }
 &nbsp;
                 catch (Exception e)
@@ -113,10 +131,10 @@ public class QualityControlChecker
                     //checking the flag is true then execute the URL Image
                     if (flag)
                     {
-                        var client = new RestClient(QualityAPIEndpoint_model2+ "/customvision/v3.0/Prediction/" + QualityPredictionKey_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/url");
+                        var client = new RestClient(QualityAPIEndpoint_model2+ "/customvision/v3.0/Prediction/" + QualityProjectID_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/url");
                         var request = new RestRequest(Method.POST);
                         request.AddHeader("Content-Type", "application/json");
-                        request.AddHeader("Prediction-Key", QualityAPIKey_model2);
+                        request.AddHeader("Prediction-Key", QualityPredictionKey_model2);
                         request.AddParameter("undefined", "{\"Url\": \"" + data + "\"}", ParameterType.RequestBody);
                         IRestResponse response = client.Execute(request);
                         result = response.Content;
@@ -127,10 +145,10 @@ public class QualityControlChecker
                     {
                         var imagebytes = Convert.FromBase64String(data);
 &nbsp;
-                        var client = new RestClient(QualityAPIEndpoint_model2 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/image");
+                        var client = new RestClient(QualityAPIEndpoint_model2 + "/customvision/v3.0/Prediction/" + QualityProjectID_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/image");
                         var request = new RestRequest(Method.POST);
                         request.AddHeader("Content-Type", "application/octet-stream");
-                        request.AddHeader("Prediction-Key", QualityAPIKey_model2);
+                        request.AddHeader("Prediction-Key", QualityPredictionKey_model2);
                         request.AddParameter("data", imagebytes, ParameterType.RequestBody);
                         IRestResponse response = client.Execute(request);
                         result = response.Content;
@@ -145,15 +163,15 @@ public class QualityControlChecker
                     {
                         dynamic pred = JObject.Parse(res_array[0].ToString());
                         //int probability = pred.probability * 100;
-&nbsp;                                            
+        &nbsp;                
                         //checking the probability 
                         if (pred.tagName == "Accurate-Space")
                         {
-                            TagName = "Pass ";
+                            TagName = "Pass " + pred.tagName;
                         }
                         else
                         {
-                            TagName = "Fail ";
+                            TagName = "Fail " + pred.tagName;
                         }
                     }
                     else
