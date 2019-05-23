@@ -9,7 +9,7 @@
 <h3>Code Summary</h3>
 <p></p>
 <h3>Azure SQL Server Connectivity through Azure Portal</h3>
-<p>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</p>
+<li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.JPG" alt="image" style="max-width: 100%;">
 <li>Enter your Password [W!pro!Azure1]</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">
