@@ -124,7 +124,7 @@
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot4.PNG" alt="image" style="max-width: 100%;">&nbsp;
 	<li>Navigate to the code line specified in the below image</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot3.PNG" alt="image" style="max-width: 100%;">&nbsp;
-	<li>Paste the below code</li>
+	<li>Paste the below code below the marked area</li>
 		<blockquote>
 			<pre>
 				<code>
@@ -134,7 +134,7 @@
 		</blockquote>
 	<li>Scroll to the code line specified in the below image</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot51.PNG" alt="image" style="max-width: 100%;">&nbsp;
-	<li>Paste the below code</li>
+	<li>Paste the below code below the marked area</li>
 		<blockquote>
 			<pre>
 				<code>
@@ -155,7 +155,7 @@
     <li>NOTE : Replace the iframe code which you got from Portal</li>
 	<li>Scroll to the code line specified in the below image</li>&nbsp;
 	<img src="http://139.59.61.161/MSWorkshop2019/BOT/Bot6.PNG" alt="image" style="max-width: 100%;">&nbsp;
-	<li>Paste the below code</li>
+	<li>Paste the below code below the marked area</li>
 		<blockquote>
 			<pre>
 				<code>
