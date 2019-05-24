@@ -115,6 +115,7 @@
 		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal18.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Grab the whole Web chat iframe code</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal19.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<h4>Paste the Microsoft App ID in 'MicrosoftAppId' and Password in 'MicrosoftAppPassword' in Web.config [NOTE : These two fields are not mandatory for running the bot locally but it is mandatory after publishing]</h4>
 	</strong>
 </ol>
 <h3>Design Changes</h3>
