@@ -10,7 +10,6 @@
 <ol>
   <strong>
       <li>To start with, update the API Key and Endpoint in Web.Config</li>
-      <li>Grab the Key and Endpoint from 'Hero Solutions' site</li>
       <li>Open Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
       <li>Enter the values for 'FaceIDSubscriptionKey', 'FaceIDEndpoint' and 'PersonGroupId'. [NOTE : To know how to create key, endpoint and group id, check Challenge 1 Document]</li>&nbsp;

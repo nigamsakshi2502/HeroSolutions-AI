@@ -15,26 +15,9 @@
       <li>Train your model and publish it in 'customvision.ai' [NOTE : Check Challenge 2 for procedures]</li>
       <li>Follow the screenshot shown below to navigate to the Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <strong>
-        <li>Replace the below code in Web.config</li>
-        <blockquote>
-            <pre>
-                <code>
-&lt;add key="QualityEndPoint_model1" value="https://southeastasia.api.cognitive.microsoft.com" /&gt;
-&lt;add key="QualityPredictionKey_model1" value="" /&gt;
-&lt;add key="QualityProjectID_model1" value="" /&gt;
-&lt;add key="QualityIterationID_model1" value="" /&gt;
-&nbsp;
-&lt;add key="QualityEndPoint_model2" value="https://southeastasia.api.cognitive.microsoft.com" /&gt;
-&lt;add key="QualityPredictionKey_model2" value="" /&gt;
-&lt;add key="QualityProjectID_model2" value="" /&gt;
-&lt;add key="QualityIterationID_model2" value="" /&gt;
-                </code>
-            </pre>
-        </blockquote>
-    </strong>
-<li>Copy and paste the Endpoint in 'QualityEndPoint', Prediction Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', Iteration name in 'QualityIterationID' in both the model files</li>&nbsp;
-      <img src="http://139.59.61.161/MSWorkshop2019/custom/webconfig.PNG" alt="image" style="max-width: 100%;"></strong>
+      <li>Copy and paste the Endpoint in 'QualityEndPoint', Prediction Key in 'QualityPredictionKey', Project-id in 'QualityProjectID', Iteration name in 'QualityIterationID' in both the model files</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/webconfig.PNG" alt="image" style="max-width: 100%;">
+  </strong>
 <h3>Getting started with coding - here we will implement the QualityControlChecker.cs file</h3>
 <li>Follow the screenshot shown below to navigate to the QualityControlChecker.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Class/QualityControlChecker.PNG" alt="image" style="max-width:100%;">&nbsp;
@@ -46,7 +29,7 @@
 <code>
 public class QualityControlChecker
 {
-    //Assigning Subscription Key and Face Endpoint from web.config file
+    //Assigning Subscription Key and Endpoint from web.config file
     private static string QualityPredictionKey_model1 = ConfigurationManager.AppSettings["QualityPredictionKey_model1"], QualityAPIEndpoint_model1 = ConfigurationManager.AppSettings["QualityEndPoint_model1"], QualityProjectID_model1 = ConfigurationManager.AppSettings["QualityProjectID_model1"], QualityIterationID_model1 = ConfigurationManager.AppSettings["QualityIterationID_model1"];
     private static string QualityPredictionKey_model2 = ConfigurationManager.AppSettings["QualityPredictionKey_model2"], QualityAPIEndpoint_model2 = ConfigurationManager.AppSettings["QualityEndPoint_model2"], QualityProjectID_model2 = ConfigurationManager.AppSettings["QualityProjectID_model2"], QualityIterationID_model2 = ConfigurationManager.AppSettings["QualityIterationID_model2"];
 &nbsp;

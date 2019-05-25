@@ -25,21 +25,11 @@
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
       <li>Copy and paste the Endpoint in 'GestureAPICall', Prediction Key in 'GestureKey' for invoking Gesture Management API.</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/output/12.PNG" alt="image" style="max-width: 100%;">
-      <li>Below the GestureKey, paste the below code</li>
-      <strong>
-        <blockquote>
-            <pre>
-                <code>
-&lt;add key="GestureProjectID" value=""/&gt;
-&lt;add key="GestureIteration" value=""/&gt;
-                </code>
-            </pre>
-        </blockquote>&nbsp;
-    <img src="http://139.59.61.161/MSWorkshop2019/custom/new.PNG" alt="image" style="max-width:100%;">&nbsp;
-    <li>Copy your Project ID</li>&nbsp;
-    <img src="http://139.59.61.161/MSWorkshop2019/custom/custom7.jpg" alt="image" style="max-width:100%;">&nbsp;
-    <img src="http://139.59.61.161/MSWorkshop2019/custom/custom8.jpg" alt="image" style="max-width:100%;">&nbsp;
-    <li>Now paste the values for project-id in GestureProjectID and iteration in GestureIteration [example iteration name is 'Iteration1']</li>
+      <li>Copy your Project ID</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom7.jpg" alt="image" style="max-width:100%;">&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/custom8.jpg" alt="image" style="max-width:100%;">&nbsp;
+      <li>Now paste the values for project-id in GestureProjectID and iteration in GestureIteration [example iteration name is 'Iteration1']</li>
+      <img src="http://139.59.61.161/MSWorkshop2019/custom/new.PNG" alt="image" style="max-width:100%;">&nbsp;
     </strong>
 </ol>
 <h3>Getting started with coding - here we will implement the GestureHandler.cs file</h3>
@@ -55,7 +45,7 @@
 <code>
 public class GestureHandler
 {
-    //Assigning Subscription Key and Face Endpoint from web.config file
+    //Assigning Subscription Key and Endpoint from web.config file
     private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"], GestureProjectID = ConfigurationManager.AppSettings["GestureProjectID"], GestureIteration = ConfigurationManager.AppSettings["GestureIteration"];
     public string error = "";
 &nbsp;
