@@ -5,13 +5,8 @@
 <h3>Prerequisites</h3>
 <ol>
 <strong>
-<li>Download the Chatbot project using the following procedure</li>
-<li>Open GitBash and type 'cd c:'</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/BOT/Git1.PNG" alt="image" style="max-width: 100%;">&nbsp;
-<li>Copy 'git clone https://github.com/jumpstartninjatech/Challenge6', right click on git bash and paste the command</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/BOT/Git2.png" alt="image" style="max-width: 100%;">&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/BOT/Git3.PNG" alt="image" style="max-width: 100%;">&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/BOT/Git4.PNG" alt="image" style="max-width: 100%;">&nbsp;</ol></strong>
+	<li>Open your ChatBot application [Which will be in the folder HeroSolutions-AI -> HOLs -> ChatBot -> ProjectManagementBot]</li>
+</strong></ol>
 <h3>Getting the LUIS key</h3>
 <ol>
 <strong>
