@@ -50,7 +50,7 @@
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql3.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Specify your database password</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql5.jpg" alt="image" style="max-width: 100%;">&nbsp;
-<li>Copy all the queries from <a href="https://github.com/jumpstartninjatech/Challenge6/blob/master/BotDB_Script.sql">sql script file</a></li>&nbsp;
+<li>Copy all the queries from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/BotDB_Script.sql">sql script file</a></li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Bot.PNG" alt="image" style="max-width: 100%;">&nbsp;
 <li>Paste all the queries in the editor pane and click on Run button</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql6.jpg" alt="image" style="max-width: 100%;">&nbsp;
