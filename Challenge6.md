@@ -4,9 +4,8 @@
 <h2>Getting Started</h2>
 <h3>Prerequisites</h3>
 <ol>
-<strong>
 	<li>Open your ChatBot application [Which will be in the folder HeroSolutions-AI -> HOLs -> ChatBot -> ProjectManagementBot]</li>
-</strong></ol>
+</ol>
 <h3>Getting the LUIS key</h3>
 <ol>
 <strong>
