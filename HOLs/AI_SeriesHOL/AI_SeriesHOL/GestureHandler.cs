@@ -14,7 +14,7 @@ namespace HeroSolutions
                 public class GestureHandler
                 {
                     //Assigning Subscription Key and Face Endpoint from web.config file
-                    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"];
+                    private static string GestureAPIKey = ConfigurationManager.AppSettings["GestureKey"], GestureAPIEndpoint = ConfigurationManager.AppSettings["GestureAPICall"], GestureProjectID = ConfigurationManager.AppSettings["GestureProjectID"], GestureIteration = ConfigurationManager.AppSettings["GestureIteration"];
                     public string error = "";
 
                     //DB check
@@ -26,7 +26,7 @@ namespace HeroSolutions
                         try
                         {
                             //Gesture API Call
-                            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/a69b9265-0748-4bb3-b926-8ba27abe41ac/detect/iterations/Iteration1/image");
+                            var client1 = new RestClient(GestureAPIEndpoint + "/customvision/v3.0/Prediction/"+ GestureProjectID + "/detect/iterations/"+ GestureIteration +"/image");
                             var request1 = new RestRequest(Method.POST);
                             request1.AddHeader("cache-control", "no-cache");
                             request1.AddHeader("Content-Type", "application/octet-stream");

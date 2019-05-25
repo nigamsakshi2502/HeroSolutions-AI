@@ -16,8 +16,8 @@ namespace AI_SeriesHOL
                     public class QualityControlChecker
                     {
                         //Assigning Subscription Key and Face Endpoint from web.config file
-                        private static string QualityAPIKey_model1 = ConfigurationManager.AppSettings["QualitySubcriptionKey_model1"], QualityAPIEndpoint_model1 = ConfigurationManager.AppSettings["QualityEndPoint_model1"], QualityPredictionKey_model1 = ConfigurationManager.AppSettings["QualityPredictionKey_model1"], QualityIterationID_model1 = ConfigurationManager.AppSettings["QualityIterationID_model1"];
-                        private static string QualityAPIKey_model2 = ConfigurationManager.AppSettings["QualitySubcriptionKey_model2"], QualityAPIEndpoint_model2 = ConfigurationManager.AppSettings["QualityEndPoint_model2"], QualityPredictionKey_model2 = ConfigurationManager.AppSettings["QualityPredictionKey_model2"], QualityIterationID_model2 = ConfigurationManager.AppSettings["QualityIterationID_model2"];
+                        private static string QualityPredictionKey_model1 = ConfigurationManager.AppSettings["QualityPredictionKey_model1"], QualityAPIEndpoint_model1 = ConfigurationManager.AppSettings["QualityEndPoint_model1"], QualityProjectID_model1 = ConfigurationManager.AppSettings["QualityProjectID_model1"], QualityIterationID_model1 = ConfigurationManager.AppSettings["QualityIterationID_model1"];
+                        private static string QualityPredictionKey_model2 = ConfigurationManager.AppSettings["QualityPredictionKey_model2"], QualityAPIEndpoint_model2 = ConfigurationManager.AppSettings["QualityEndPoint_model2"], QualityProjectID_model2 = ConfigurationManager.AppSettings["QualityProjectID_model2"], QualityIterationID_model2 = ConfigurationManager.AppSettings["QualityIterationID_model2"];
 
                         public string error = "";
                         public string TagName = "";
@@ -35,10 +35,10 @@ namespace AI_SeriesHOL
                                         //checking the flag is true then execute the URL Image
                                         if (flag)
                                         {
-                                            var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/url");
+                                            var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityProjectID_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/url");
                                             var request = new RestRequest(Method.POST);
                                             request.AddHeader("Content-Type", "application/json");
-                                            request.AddHeader("Prediction-Key", QualityAPIKey_model1);
+                                            request.AddHeader("Prediction-Key", QualityPredictionKey_model1);
                                             request.AddParameter("undefined", "{\"Url\": \"" + data + "\"}", ParameterType.RequestBody);
                                             IRestResponse response = client.Execute(request);
                                             result = response.Content;
@@ -49,10 +49,10 @@ namespace AI_SeriesHOL
                                         {
                                             var imagebytes = Convert.FromBase64String(data);
 
-                                            var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/image");
+                                            var client = new RestClient(QualityAPIEndpoint_model1 + "/customvision/v3.0/Prediction/" + QualityProjectID_model1 + "/detect/iterations/" + QualityIterationID_model1 + "/image");
                                             var request = new RestRequest(Method.POST);
                                             request.AddHeader("Content-Type", "application/octet-stream");
-                                            request.AddHeader("Prediction-Key", QualityAPIKey_model1);
+                                            request.AddHeader("Prediction-Key", QualityPredictionKey_model1);
                                             request.AddParameter("data", imagebytes, ParameterType.RequestBody);
                                             IRestResponse response = client.Execute(request);
                                             result = response.Content;
@@ -99,10 +99,10 @@ namespace AI_SeriesHOL
                                         //checking the flag is true then execute the URL Image
                                         if (flag)
                                         {
-                                            var client = new RestClient(QualityAPIEndpoint_model2+ "/customvision/v3.0/Prediction/" + QualityPredictionKey_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/url");
+                                            var client = new RestClient(QualityAPIEndpoint_model2+ "/customvision/v3.0/Prediction/" + QualityProjectID_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/url");
                                             var request = new RestRequest(Method.POST);
                                             request.AddHeader("Content-Type", "application/json");
-                                            request.AddHeader("Prediction-Key", QualityAPIKey_model2);
+                                            request.AddHeader("Prediction-Key", QualityPredictionKey_model2);
                                             request.AddParameter("undefined", "{\"Url\": \"" + data + "\"}", ParameterType.RequestBody);
                                             IRestResponse response = client.Execute(request);
                                             result = response.Content;
@@ -113,10 +113,10 @@ namespace AI_SeriesHOL
                                         {
                                             var imagebytes = Convert.FromBase64String(data);
 
-                                            var client = new RestClient(QualityAPIEndpoint_model2 + "/customvision/v3.0/Prediction/" + QualityPredictionKey_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/image");
+                                            var client = new RestClient(QualityAPIEndpoint_model2 + "/customvision/v3.0/Prediction/" + QualityProjectID_model2 + "/classify/iterations/" + QualityIterationID_model2 + "/image");
                                             var request = new RestRequest(Method.POST);
                                             request.AddHeader("Content-Type", "application/octet-stream");
-                                            request.AddHeader("Prediction-Key", QualityAPIKey_model2);
+                                            request.AddHeader("Prediction-Key", QualityPredictionKey_model2);
                                             request.AddParameter("data", imagebytes, ParameterType.RequestBody);
                                             IRestResponse response = client.Execute(request);
                                             result = response.Content;
@@ -135,11 +135,11 @@ namespace AI_SeriesHOL
                                             //checking the probability 
                                             if (pred.tagName == "Accurate-Space")
                                             {
-                                                TagName = "Pass " + pred.tagName;
+                                                TagName = "Pass ";
                                             }
                                             else
                                             {
-                                                TagName = "Fail " + pred.tagName;
+                                                TagName = "Fail ";
                                             }
                                         }
                                         else

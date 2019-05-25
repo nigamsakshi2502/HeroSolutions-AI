@@ -44,7 +44,7 @@ namespace HeroSolutions
                 //Real or Face CheckBox
                 if (realfakecheck == "Yes")
                 {
-                    if (idhobj.Validate(imagebyte,url))
+                    if (idhobj.Validate(imagebyte, url))
                     {
                         if (gsobj.GenerateDefaultGesture(url,imagebyte))
                         {
@@ -277,6 +277,7 @@ namespace HeroSolutions
 
             return false;
         }
+
 
         public static List<audit_log> Admin_AuditLogShow()
         {

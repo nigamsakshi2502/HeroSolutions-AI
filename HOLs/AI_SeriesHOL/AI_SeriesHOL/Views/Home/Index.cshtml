@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css" />
     <!-- Template CSS -->
     <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://139.59.61.161/MSWorkshop2019/chatbot.css" />
+
     <style>
 
         .admin_btn {
@@ -110,6 +112,16 @@
         <!-- END COPYRIGHT -->
     </footer>
     <!-- END FOOTER -->
+    <button class="open-button" id="open_button" onclick="openForm()"><i class="fa fa-comments" style="font-size: 30px;color:white;"></i></button>
+
+    <div class="chat-popup" id="myForm" style="z-index:999999;">
+
+        <form class="form-container">
+            <h6 style="color:black;float:left">Task Management</h6>
+            <button type="button" class="btn cancel" onclick="closeForm()" style="background:transparent;padding:0px;margin:0px;float:right;width:10%;"><i class="fa fa-window-close" style="font-size: 20px;color:black;margin-top:5px;"></i></button>
+            <iframe style="width:100%;height:450px;" src="https://webchat.botframework.com/embed/ProjectManagementBot?s=SlFM-pB6rpA.SGjlizPkjluSHUAo1dRDq3yGm6GzZUpBVZ94gRd4yrI" frameborder="0" scrolling="auto" marginheight="0" marginwidth="0"></iframe>
+
+        </form>
     </div>
     <!-- END WRAPPER -->
     <!-- Libs -->
@@ -123,5 +135,14 @@
     <!-- Template Scripts -->
     <script type="text/javascript" src="~/assets/js/scripts.js"></script>
     <script type="text/javascript" src="~/assets/style-switcher/js/jQuery.style.switcher.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.visibility = "visible";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.visibility = "hidden";
+        }
+    </script>
 </body>
 </html>
