@@ -34,7 +34,7 @@
 <ol><strong>
 <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.JPG" alt="image" style="max-width: 100%;">&nbsp;
-<li>Enter your Password [W!pro!Azure1]</li>&nbsp;
+<li>Enter your Password</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">&nbsp;
 <li>Click on SQL databases tab in the left pane</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql1.jpg" alt="image" style="max-width: 100%;">&nbsp;
