@@ -378,7 +378,7 @@ public class ImageValidationHandler
 <h3>Azure SQL Server Connectivity through Azure Portal</h3>
 <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.JPG" alt="image" style="max-width: 100%;">
-<li>Enter your Password [W!pro!Azure1]</li>
+<li>Enter your Password</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">
 <li>Click on SQL databases tab in the left pane</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql1.jpg" alt="image" style="max-width: 100%;">
