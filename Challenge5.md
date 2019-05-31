@@ -6,7 +6,7 @@
 <li>Kindly ensure that the application works fine so far.</li>
 <li>We are going to build the Legal Document Verification in the same application</li>
 <h3>Code Summary</h3>
-<p>Legal Document Verification has two parts. The first part is OCR (Optical Character Recognizer), its an API which is created by us using Azure Custom Vision. It is used for finding the character for a given document or an images. Using OCR, we can get the text from the input(document/image)</p>
+<p>Legal Document Verification has two parts. The first part is OCR (Optical Character Recognizer), its an API which is created by us using Azure Custom Vision. It is used for finding the character for a given document or an image. Using OCR, we can get the text from the input(document/image)</p>
 <p>After getting all the text from the OCR, we need to do the Automatic Keyword Extraction using Microsoft LUIS.</p>
 <p>This application has the DocumentVerificationHandler.cs file, which is used to implement all the functionalities.The Facade.cs file is used as an intermediator between HomeController and DocumentVerificationHandler files.</p>&nbsp;
 <h3>Invoke the Quality Controller Check API</h3>

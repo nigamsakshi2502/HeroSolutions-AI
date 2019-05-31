@@ -7,13 +7,26 @@
 <li>We are going to build the Register, Verify and Audit Log modules in the same application</li>
 <h3>Code Summary</h3>
 <p></p>
-<ol>
-  <strong>
-      <li>To start with, update the API Key and Endpoint in Web.Config</li>
+<h3>Creating Group ID</h3>
+  <ol>
+    <strong>
+      <li>Navigate to <a href="https://southeastasia.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244">Developer Portal</a>, click on PersonGroup tab on the left pane</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_1.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>Click on create tab on the left pane</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_2.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>Select the region</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_3.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>Enter any id in PersonGroupId, specify the face api key created in Azure portal here in 'Ocp-Apim-Subscription-Key'</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_4.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>In the Json specify the name and recognitionModel [Note : recognitionModel value must be 'recognition_01']</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_5.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>Response will be displayed</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_6.jpg" alt="image" style="max-width: 100%;">&nbsp;
+      <li>To start with, update the GroupID in Web.Config</li>&nbsp;
       <li>Open Web.Config file</li>&nbsp;
       <img src="http://139.59.61.161/MSWorkshop2019/Class/Web_config.PNG" alt="image" style="max-width:100%;">&nbsp;
-      <li>Enter the values for 'FaceIDSubscriptionKey', 'FaceIDEndpoint' and 'PersonGroupId'. [NOTE : To know how to create key, endpoint and group id, check Challenge 1 Document]</li>&nbsp;
-      <img src="http://139.59.61.161/MSWorkshop2019/Register/register_WebConfig.PNG" alt="image" style="max-width:100%;">
+      <li>Enter the value for 'PersonGroupId'.</li>&nbsp;
+      <img src="http://139.59.61.161/MSWorkshop2019/Register/webconfig.PNG" alt="image" style="max-width:100%;">
   </strong>
 </ol>
 <h3>Design Changes</h3>

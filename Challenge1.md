@@ -149,7 +149,7 @@ public static byte[] storetoserver(string base64data)
       <li>Paste the Endpoint in 'FaceAPIEndPoint' and Key in 'FaceAPIKey'</li>
       <li>NOTE : Paste the endpoint only till '.com', example : 'https://southeastasia.api.cognitive.microsoft.com'</li>
       &nbsp;
-        <img src="http://139.59.61.161/MSWorkshop2019/Invoke_StarterKit/7.PNG" alt="image" style="max-width: 100%;"></strong>
+        <img src="http://139.59.61.161/MSWorkshop2019/Invoke_StarterKit/webconfig.PNG" alt="image" style="max-width: 100%;"></strong>
         &nbsp;
 <p>The below code snippet calls the Face API and checks for 4 attributes - Face availability, Multiple Face check, Sunglasses check and allowed Emotions.</p>
 <strong>
