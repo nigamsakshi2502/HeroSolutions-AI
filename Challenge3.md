@@ -6,7 +6,7 @@
 <li>Kindly ensure that the application works fine so far.</li>
 <li>We are going to build the Register, Verify and Audit Log modules in the same application</li>
 <h3>Code Summary</h3>
-<p></p>
+<p>For the Face Registration, 3 Azure face APIs will be used [Create Person API, Add Face API and Train API]. For the Face Verification, 2 Azure Face APIs will be used [Detect API and Verify API]. In the Admin portal, we can view all the audit logs in the Audit Log page.</p>
 <h3>Creating Group ID</h3>
   <ol>
     <strong>

@@ -365,9 +365,9 @@ class GestureTable
 <h3>Below is the code snippet of Intermediator -'Facade.cs' Class which is used to connect to the C# classes [GestureHandler.cs, StorageHandler.cs & HomeController.cs]</h3>
 <ol>
 <strong>
-<li>Copy and Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the RandomGestureShow Function Code here...'</li>
 <li>Follow the screenshot shown below to navigate to the RandomGestureShow Function in the Facade.cs file</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Challenge2/Class/3.png" alt="image" style="max-width:100%;">&nbsp;
+<li>Copy and Paste the code given below in 'Facade.cs', (i.e) below the comment 'Paste the RandomGestureShow Function Code here...'</li>
 <blockquote>
 <pre>
 <code>
