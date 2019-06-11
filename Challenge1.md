@@ -1,10 +1,10 @@
 <h1>AI Series HOL</h1>
-<h1>Challenge 1 – Image Validation using Azure Computer Vision</h1>
+<h1>Challenge 1 â€“ Image Validation using Azure Computer Vision</h1>
 <p>In Challenge 1, we are going to explore how to use Azure's Face API to validate the given image (the image will be taken from the live stream), connect with Azure SQL Server Database and register a person's face to be used later during the face identification.</p>
 <h2>Getting Started</h2>
 <p>Download the AI Series HOL Starter Kit from the <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/tree/master/HOLs/AI_Series_Starter_Kit">Git Repo</a></p>
 <h3>Prerequisites</h3>
-    <li>Kindly ensure that your Visual Studio and SQL Server Management Studio is working fine.</li>
+    <li>Kindly ensure that your Visual Studio and SQL Server Management Studio are working fine.</li>
     <li>Open the AI Series Starter Kit application.</li>&nbsp;
     <img src="http://139.59.61.161/MSWorkshop2019/Invoke_StarterKit/1.PNG" alt="image" style="max-width:100%;">
     <li>In the solution explorer [View -> Solution Explorer]</li>&nbsp; 
@@ -124,23 +124,6 @@ public static byte[] storetoserver(string base64data)
     <li>Copy the Keys</li>
     <img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_10.jpg" alt="image" style="max-width: 100%;">
   </strong></ol>
-  <h3>Creating Group ID</h3>
-  <ol>
-    <strong>
-      <li>Navigate to <a href="https://southeastasia.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244">Developer Portal</a>, click on PersonGroup tab on the left pane</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_1.jpg" alt="image" style="max-width: 100%;">
-      <li>Click on create tab on the left pane</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_2.jpg" alt="image" style="max-width: 100%;">
-      <li>Select the region</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_3.jpg" alt="image" style="max-width: 100%;">
-      <li>Enter any id in PersonGroupId, specify the face api key created in Azure portal here in 'Ocp-Apim-Subscription-Key'</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_4.jpg" alt="image" style="max-width: 100%;">
-      <li>In the Json specify the name and recognitionModel [Note : recognitionModel value must be 'recognition_01']</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_5.jpg" alt="image" style="max-width: 100%;">
-      <li>Response will be displayed</li>
-      <img src="http://139.59.61.161/MSWorkshop2019/face_group_id/face_6.jpg" alt="image" style="max-width: 100%;">
-    </strong>
-  </ol>
 <h3>Invoking the Face API</h3>
 <ol>
   <strong>
@@ -377,7 +360,7 @@ public class ImageValidationHandler
 <img src="http://139.59.61.161/MSWorkshop2019/DB_Creation/10.jpg" style="max-width:100%;">&nbsp;
 <h3>Azure SQL Server Connectivity through Azure Portal</h3>
 <li>Sign-in to Azure Portal by typing "portal.azure.com" in browser, enter your username</li>
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.JPG" alt="image" style="max-width: 100%;">
+<img src="http://139.59.61.161/MSWorkshop2019/sql/sql0c.JPG" alt="image" style="max-width: 100%;">
 <li>Enter your Password</li>
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">
 <li>Click on SQL databases tab in the left pane</li>
