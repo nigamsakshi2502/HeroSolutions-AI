@@ -1,4 +1,4 @@
-<h1>AI Series HOL</h1>
+﻿<h1>AI Series HOL</h1>
 <h2>Challenge 6 – Integration of NLP based Chat bot for Task Management</h2>
 <p>In Challenge 6 we are going to explore about how to Track status and Report status using Bot application</p>
 <h2>Getting Started</h2>
@@ -18,7 +18,7 @@
 <li>Click on Manage</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/8.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Copy the Application ID</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/LuisImages/9.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/LuisImages/9_hackathon.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Copy only the Key</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/BOT/LUIS1.PNG" alt="image" style="max-width: 100%;"></ol></strong>
 <h3>Web Config Changes</h3>
@@ -37,21 +37,21 @@
 <li>Enter your Password</li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/sql/sql0.1.JPG" alt="image" style="max-width: 100%;">&nbsp;
 <li>Click on SQL databases tab in the left pane</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql1.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql1.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Select your particular database</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql2.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql2.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Click on Query editor</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql3.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql3.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Specify your database password</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql5.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql5.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Copy all the queries from <a href="https://github.com/jumpstartninjatech/HeroSolutions-AI/blob/master/HOLs/BotDB_Script.sql">sql script file</a></li>&nbsp;
 <img src="http://139.59.61.161/MSWorkshop2019/Bot.PNG" alt="image" style="max-width: 100%;">&nbsp;
 <li>Paste all the queries in the editor pane and click on Run button</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql6.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql6_hackathon.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Now click on Connection strings tab in the left pane</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql7.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql7_hackathon.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <li>Copy your Connection string</li>&nbsp;
-<img src="http://139.59.61.161/MSWorkshop2019/sql/sql8.jpg" alt="image" style="max-width: 100%;">&nbsp;
+<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/sql/sql8_hackathon.jpg" alt="image" style="max-width: 100%;">&nbsp;
 <h4>Paste your SQL server connection string details in Web.config (i.e) for 'DataSource' give 'jsn.database.windows.net', for 'UserID' give 'demouser', for 'Password' give 'demo@pass123' and for 'InitialCatalog' give your database name</h4>&nbsp;
 <h4>Before running the bot make sure your 'pdi_engineer_details' table has an entry, (i.e) in the azure editor pane run the following query by specifying the user name</h4>
 <blockquote>
@@ -84,21 +84,21 @@
 		<li>Click on create a resource</li>
 		<img src="http://139.59.61.161/MSWorkshop2019/face_computer_portal/faceAPI_create/portal_3.jpg" alt="image" style="max-width: 100%;">
 		<li>In the search box type 'web app bot'</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal1.png" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal1_hackathon.png" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on Create button</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal2.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal2_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Fill out all the details</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal3.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal3_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Scroll down and click on 'Microsoft App ID and password'</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal4.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal4_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on 'Create New'</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal5.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal5_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on 'Create App ID in the App Registration Portal'</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal6.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal6_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Sign-in using credentials</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal7.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal7.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Select your Account</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal8.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal8.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on 'Generate an app password to continue'</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal9.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Copy your Password</li>&nbsp;
@@ -106,9 +106,9 @@
 		<li>Copy your App ID</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal11.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Paste your app id and password</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal12.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal12_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on Create button</li>&nbsp;
-		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal13.PNG" alt="image" style="max-width: 100%;">&nbsp;
+		<img src="http://139.59.61.161/Hackathon/MSWorkshop2019/BOT/Portal13_hackathon.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Open your Web app bot and click on Settings, in the Configuration paste your site URL which you got while publish. [NOTE : Make sure you are adding '/api/messages' in the end of your URL] and click on Save</li>&nbsp;
 		<img src="http://139.59.61.161/MSWorkshop2019/BOT/Portal15.PNG" alt="image" style="max-width: 100%;">&nbsp;
 		<li>Click on Channels, click on Edit</li>&nbsp;
