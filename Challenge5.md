@@ -1,4 +1,4 @@
-<h1>AI Series HOL</h1>
+﻿<h1>AI Series HOL</h1>
 <h2>Challenge 5 – Automatic Extraction of Key Phrases using Azure OCR and LUIS</h2>
 <p>In Challenge 5 we are going to explore about how the Legal Document Verification works using Azure Custom Vision API and Microsoft Luis.</p>
 <h2>Getting Started</h2>
@@ -56,9 +56,9 @@
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/4.jpg" alt="image" style="max-width: 100%;">
         <li>Select the Json file</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/5.jpg" alt="image" style="max-width: 100%;">
-        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/6.jpg" alt="image" style="max-width: 100%;">
+        <img src="http://139.59.61.161/Hackathon/MSWorkshop2019/LuisImages/6_hackathon.jpg" alt="image" style="max-width: 100%;">
         <li>Enter name</li>
-        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/7.jpg" alt="image" style="max-width: 100%;">
+        <img src="http://139.59.61.161/Hackathon/MSWorkshop2019/LuisImages/7_hackathon.jpg" alt="image" style="max-width: 100%;">
         <li>Click on Train button</li>
         <img src="http://139.59.61.161/MSWorkshop2019/custom/LUIS2.jpg" alt="image" style="max-width: 100%;">
         <li>After training is completed, click on Publish button</li>
@@ -67,7 +67,7 @@
         <li>Click on Manage</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/8.jpg" alt="image" style="max-width: 100%;">
         <li>Copy the Application ID</li>
-        <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/9.jpg" alt="image" style="max-width: 100%;">
+        <img src="http://139.59.61.161/Hackathon/MSWorkshop2019/LuisImages/9_hackathon.jpg" alt="image" style="max-width: 100%;">
         <li>Copy Key and Endpoint</li>
         <img src="http://139.59.61.161/MSWorkshop2019/LuisImages/10.jpg" alt="image" style="max-width: 100%;">
         <li>Paste the Endpoint in 'LUIS_EndPoint', Application ID in 'LUIS_AppID' and Key 'LUIS_Key' in Web.Config [NOTE : Paste the endpoint only till 'v2.0/apps/' (example endpoint : "https://westus2.api.cognitive.microsoft.com/luis/v2.0/apps/")]</li>
